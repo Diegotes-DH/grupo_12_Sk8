@@ -1,7 +1,7 @@
 # Grupo 12 - Sk8
 En este grupo vamos a estar trabajando en una tienda de ventas de Skates. La misma se llamará “Sk8”, y la propuesta de valor será entregar a nuestros clientes las herramientas necesarias para que cada uno pueda contar con un skate personalizado a su técnica y estilo.
 
-**Target** Nuestro público objetivo serán, en primer lugar, skaters con experiencia en la disciplina, que ya conozcan el mercado y que tengan bien en claro cuales son sus necesidades a la hora de armar un skate.
+**Target:** Nuestro público objetivo serán, en primer lugar, skaters con experiencia en la disciplina, que ya conozcan el mercado y que tengan bien en claro cuales son sus necesidades a la hora de armar un skate.
 En segundo lugar estarán los skaters que se estén iniciando o principiantes con poca experiencia. Para ellos, contaremos con una sección en la que se brinde un poco de información y skates ya armados para que puedan entender cuál es el mejor para ellos.
 
 - Expertos - 15 a 35 años
