@@ -21,7 +21,7 @@ En segundo lugar estarán los skaters que se estén iniciando o principiantes co
 ## Sitios de referencia
 
  **Mercado Libre** www.mercadolibre.com.ar
- - Servicio de post venta
+ - Retargeting de post venta
  - Experiencia de usuario con el carrito
  
  **Sport Fanatic** www.sportfanatic.com.ar
