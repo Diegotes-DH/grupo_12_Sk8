@@ -41,5 +41,8 @@ En segundo lugar estarán los skaters que se estén iniciando o principiantes co
 ## Wireframes
 https://marvelapp.com/prototype/64475gi
 
+## Tablero de tareas - Trello
+https://trello.com/invite/b/Y3Tc9mLI/1bc63014dd339f6c5d62b587418d3211/sk8
+
 
  
