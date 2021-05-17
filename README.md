@@ -1,6 +1,11 @@
 # Grupo 12 - Sk8
-Vamos a trabajar en un tienda de comercialización de Skates, en la cual lo clientes podrán comprar una tabla armada o customizarla parte por parte.
-**Target** apuntamos a un público de entre 12 a 30 años, segmentado entre aficionados y expertos.
+En este grupo vamos a estar trabajando en una tienda de ventas de Skates. La misma se llamará “Sk8”, y la propuesta de valor será entregar a nuestros clientes las herramientas necesarias para que cada uno pueda contar con un skate personalizado a su técnica y estilo.
+
+**Target:** Nuestro público objetivo serán, en primer lugar, skaters con experiencia en la disciplina, que ya conozcan el mercado y que tengan bien en claro cuales son sus necesidades a la hora de armar un skate.
+En segundo lugar estarán los skaters que se estén iniciando o principiantes con poca experiencia. Para ellos, contaremos con una sección en la que se brinde un poco de información y skates ya armados para que puedan entender cuál es el mejor para ellos.
+
+- Expertos - 15 a 35 años
+- Aficionados - 8 a 20 años (en su mayoría la compra será realizada por terceros, ej: padres)
 
 
 # Integrantes
@@ -9,14 +14,14 @@ Vamos a trabajar en un tienda de comercialización de Skates, en la cual lo clie
 
 **Francisco Astarloa** tiene 19 años, estudia Programación Web Fullstack, le gustan los deportes, principalmente el automovilismo al que se dedica amateurmente. 
 
-**Francisco Monte** xxxxxx
+**Francisco Monte** tiene 25 años, es artista, estudió direccion de cine, realizó talleres y becas artisticas.
  
 
 
 ## Sitios de referencia
 
  **Mercado Libre** www.mercadolibre.com.ar
- - Servicio de post venta
+ - Retargeting de post venta
  - Experiencia de usuario con el carrito
  
  **Sport Fanatic** www.sportfanatic.com.ar
@@ -31,4 +36,13 @@ Vamos a trabajar en un tienda de comercialización de Skates, en la cual lo clie
  
  **Top Mega** www.topmega.com.ar
  - Menú desplegable sobre imagen de background
+
+
+## Wireframes
+https://marvelapp.com/prototype/64475gi
+
+## Tablero de tareas - Trello
+https://trello.com/invite/b/Y3Tc9mLI/1bc63014dd339f6c5d62b587418d3211/sk8
+
+
  
