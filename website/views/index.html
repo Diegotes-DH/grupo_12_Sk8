@@ -5,8 +5,115 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sk8</title>
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/01e5ccde67.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <h1>Hola</h1>
+    <header class="main-header">
+        <div class="main-header-top-bar">
+            <img class="logo" src="/images/sk8-logo.png">
+            <form class="search" action="" method="post" target="_blank">
+                <p> 
+                    <input  type="search" placeholder="Buscar productos">
+                    <button type="submit" value="Buscar"><i class="fas fa-search"></i></button>
+                </p>
+            </form>
+            <a href="#" class="user">
+                <i class="fas fa-user  fa-2x"></i>
+            </a>
+            <a href="#" class="shopping-cart">
+                <i class="fas fa-shopping-cart  fa-2x"></i>
+            </a>
+            
+        </div>
+
+        <a href="#" class="hamburguer-button">
+            <i class="fas fa-bars"></i>
+        </a>
+
+        <nav class="main-navbar">
+            <ul>
+                <li><a href="#">Mi primer Skate</a></li>
+                <li><a href="#">Tablas</a></li>
+                <li><a href="#">Trucks</a></li>
+                <li><a href="#">Ruedas</a></li>
+                <li><a href="#">Rulemanes</a></li>
+                <li><a href="#">Lijas</a></li>
+                <li><a href="#">Accesorios</a></li>
+                <li><a href="#">Protecciones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div>
+            <img class= "bannerHome" src="/images/bannerHome.png">
+        </div>
+
+        <h1>Destacados</h1>
+
+        <article>
+            <img src="">
+            <h5 class="product-name">Tabla Guatambú</h5>
+            <p class="description">Tabla cóncava con doble kick</p>
+            <p class="price">$5.000</p>
+            <button class="buy">Comprar</button>
+        </article>
+
+        <article>
+            <img src="">
+            <h5 class="product-name">Ruedas</h5>
+            <p class="description">Diametro 53mm</p>
+            <p class="price">$2.000</p>
+            <button class="buy">Comprar</button>
+        </article>
+
+        <article>
+            <img src="">
+            <h5 class="product-name">Trucks</h5>
+            <p class="description">Aluminio y ejes de acero templado.</p>
+            <p class="price">$3.000</p>
+            <button class="buy">Comprar</button>
+        </article>
+
+        <article>
+            <img src="/">
+            <h5 class="product-name">Skate Armado</h5>
+            <p class="description">Tabla doble kick 8"</p>
+            <p class="price">$10.000</p>
+            <button class="buy">Comprar</button>
+        </article>
+        
+    </section>
+    
+    <footer>
+        <article>
+            <h4>Medios de pago</h4>
+            <ul>
+                <li>Tarjetas</li>
+                <li>Mercado Pago</li>
+            </ul>
+        </article>
+
+        <article>
+            <h4>Redes Sociales</h4>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+        </article>
+
+        <article>
+            <h4>Contacto</h4>
+            <ul>
+                <li>WhatsApp</li>
+                <li>e-mail</li>
+                <li>Local</li>
+            </ul>
+
+        </article>
+
+    </footer>
 </body>
 </html>
