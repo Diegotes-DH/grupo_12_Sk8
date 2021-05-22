@@ -17,19 +17,29 @@ body {
 .main-header-top-bar{
     background-color: black;
     display:flex;
+    flex-wrap: wrap;
     justify-content:space-between;
 }
 
-.logo{
-    width:20%;
-    max-width: 90%;
-    margin: 10px;
+.hamburguer-button{
+    color:white;
+    text-align: center;
+    font-size: 18px;
+    max-width: 20%;
     padding: 5px;
+    margin: 10px;
+}
+
+.logo{
+    width: 100px;
+    margin: 10px;
     box-sizing: border-box;
+    
 }
 
 .search{
     align-self: center;
+    display: none;
 }
 
 .user{
@@ -39,27 +49,16 @@ body {
     width:20%;
     max-width: 90%;
     align-self: center;
+    display: none;
 }
 
 .shopping-cart{
     color:white;
-    font-size: 1rem;
+    font-size: 12px;
     text-align: center;
-    width:20%;
-    max-width: 90%;
+    max-width: 20%;
     align-self: center;
-}
-
-.hamburguer-button{
-    color:white;
-    text-align: center;
-    font-size: 18px;
-    background-color: black;
-    display: block;
-    max-width: 40px;
-    padding: 5px;
-    border-radius: 5px;
-    margin: auto;
+    margin: 10px;
 }
 
 .main-navbar{
@@ -91,11 +90,14 @@ body {
 footer{
     background-color: #ebe9eb;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 10px;
 }
 
 footer article ul{
     list-style: none;
-    font-size: 1rem;
+    font-size: 10px;
+    text-align: center;
 }
+
+
