@@ -15,6 +15,7 @@ body {
 }
 
 .main-header-top-bar{
+    padding: 0 10px;
     background-color: black;
     display:flex;
     flex-wrap: wrap;
@@ -28,10 +29,11 @@ body {
     max-width: 20%;
     padding: 5px;
     margin: 10px;
+    align-self: center;
 }
 
 .logo{
-    width: 100px;
+    width: 30%;
     margin: 10px;
     box-sizing: border-box;
     
@@ -44,12 +46,12 @@ body {
 
 .user{
     color:white;
-    font-size: 1rem;
+    font-size: 12px;
     text-align: center;
-    width:20%;
-    max-width: 90%;
+    max-width: 20%;
     align-self: center;
     display: none;
+    margin: 10px;
 }
 
 .shopping-cart{
@@ -68,7 +70,9 @@ body {
 
 .main-navbar ul{
     list-style: none;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0;
 }
 
 .main-navbar a{
@@ -78,26 +82,208 @@ body {
     padding: 5px 0;
 }
 
+
 /*-----------------------Section--------------------------------*/
 
 .bannerHome{
     max-width:100%;
 }
 
+section{
+    max-width: 90%;
+    margin:auto;
+}
 
+h1{
+    text-align: center;
+    color:#747274;
+    margin: 3%;
+}
+
+.product{
+    background-color: white;
+    box-shadow: 0px 0px 10px rgb(190, 190, 190);
+    padding: 5vw;
+    border-radius: 3%;
+    margin-bottom: 10px
+
+}
+
+.product-image{
+    width: 90%;
+    margin: 5%;
+}
+
+.product-name{
+    font-size: 1rem;
+}
+
+.description{
+    font-size: 1rem;
+    font-weight: 200
+}
+
+.price{
+    font-style: bold;
+}
+
+.buy{
+    display: block;
+    margin: 5px auto 0;
+    background-color: #3cff1e;
+    color: black;
+    border-radius: 3px;
+    border-color: none;
+    appearance: none;
+    border-style: none;
+    padding: 5px 20px;
+    width: 80%;
+    font-family: Poppins;
+}
+
+.final-info{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    border-top: 1px solid #ebe9eb;
+    color:#747274;
+}
+
+.final-info h6{
+    font-size: 15px;
+}
+
+.icon{
+    font-size: 50px;
+    color: #fe4a49;
+}
 /*-----------------------Footer--------------------------------*/
 
 footer{
     background-color: #ebe9eb;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding: 10px;
+    text-align: center;
+    margin: 30px auto 0;
+
+}
+
+footer h6{
+    font-size: 15px;
 }
 
 footer article ul{
     list-style: none;
-    font-size: 10px;
-    text-align: center;
+    font-size: 1rem;
 }
 
+.social-media ul{
+    list-style: none;
+    display: flex;
+    justify-content:space-around;
+}
 
+/*-----------------------Tablet--------------------------------*/
+
+@media (min-width:600px){
+
+    .main-header-top-bar{
+        padding: 0 20px;
+        justify-content:space-between;
+    }
+
+    .hamburguer-button{
+        display:none;
+    }
+
+    .logo{
+        max-width:10%;
+    }
+
+    .search{
+        display: block;
+        flex-grow: 0.9;
+    }
+
+    .search input{
+        border: none;
+        border-radius:0;
+        width: 50%;
+        font-size: 15px;
+        font-family: Poppins;
+    }
+
+    .search p{
+        text-align: center;
+    }
+
+    .search button{
+        border: none;
+        border-radius:0;
+        font-size: 15px;
+        font-family: Poppins;
+        background-color:white;
+        color: grey;
+        text-align: center;
+
+    }
+
+    .user{
+        display: block;
+    }
+
+
+    .main-navbar{
+        display: block;
+
+    }
+
+    .main-navbar ul {
+        display: flex;
+        justify-content:space-around;
+    }
+
+    .main-navbar li {
+        margin: 10px 7px 5px;
+
+    }
+
+    h1{
+        width: 100%;
+        font-size: 40px;
+    }
+
+    section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .product{
+        width: 40%;
+        margin: 10px;
+        flex-grow: 0.5;
+
+    }
+
+
+}
+
+/*-----------------------Desktop--------------------------------*/
+
+@media (min-width:1000px){
+
+    .product{
+        width: 20%;
+        margin: 10px;
+        flex-grow: 0.5;
+        padding: 10px;
+
+    }
+
+}
