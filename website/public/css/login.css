@@ -18,7 +18,7 @@ body {
     padding: 0 10px;
     background-color: black;
     display:flex;
-    flex-wrap:nowrap;
+    flex-wrap: nowrap;
     justify-content:space-between;
 }
 
@@ -82,84 +82,63 @@ body {
     padding: 5px 0;
 }
 
-
 /*-----------------------Section--------------------------------*/
 
-.bannerHome{
-    max-width:100%;
-}
-
 section{
+    height:75vh;
     max-width: 90%;
     margin:auto;
-}
-
-h1{
-    text-align: center;
-    color:#747274;
-    margin: 3%;
-}
-
-.product{
-    background-color: white;
-    box-shadow: 0px 0px 10px rgb(190, 190, 190);
-    padding: 5vw;
-    border-radius: 3%;
-    margin-bottom: 10px
 
 }
 
-.product-image{
-    width: 90%;
-    margin: 5%;
-}
-
-.product-name{
-    font-size: 1rem;
-}
-
-.description{
-    font-size: 1rem;
-    font-weight: 200
-}
-
-.price{
-    font-style: bold;
-}
-
-.buy{
-    display: block;
-    margin: 5px auto 0;
-    background-color: #3cff1e;
-    color: black;
-    border-radius: 3px;
-    border-color: none;
-    appearance: none;
-    border-style: none;
-    padding: 5px 20px;
-    width: 80%;
-    font-family: Poppins;
-}
-
-.final-info{
-    display:flex;
+form{
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    text-align: center;
-    margin: 30px auto;
-    padding: 20px;
-    border-top: 1px solid #ebe9eb;
-    color:#747274;
+    width: 90%;
+    margin:auto;
+    padding: 10px;
 }
 
-.final-info h6{
-    font-size: 15px;
+fieldset{
+    border: none;
+    width: 100%;
+    padding: 10px 5px;
+    align-self: center;
 }
 
-.icon{
-    font-size: 50px;
-    color: #fe4a49;
+.type{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 5px;
+    font-family: "Poppins";
+    background-color:#ebe9eb;
 }
+
+.sendButton{
+    width: 100%;
+    font-size:17px;
+    border-radius: 5px;
+    border: 1px solid #3cff1e;
+    background-color:#3cff1e;
+    color: black;
+   font-family: "Poppins";
+    
+}
+
+.createButton{
+    width: 100%;
+    font-size:17px;
+    border-radius: 5px;
+    border: 1px solid #fe4a49;
+    background-color:white;
+    color: black;
+   font-family: "Poppins";
+    
+}
+
 /*-----------------------Footer--------------------------------*/
 
 footer{
@@ -248,38 +227,10 @@ footer article ul{
         margin: 10px 7px 5px;
 
     }
-
-    h1{
-        width: 100%;
-        font-size: 40px;
-    }
-
-    section{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .product{
-        width: 40%;
-        margin: 10px;
-        flex-grow: 0.5;
-
-    }
-
-
 }
+
+
 
 /*-----------------------Desktop--------------------------------*/
 
-@media (min-width:1000px){
-
-    .product{
-        width: 20%;
-        margin: 10px;
-        flex-grow: 0.5;
-        padding: 10px;
-
-    }
-
-}
+@media (min-width:1000px){}

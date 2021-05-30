@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sk8</title>
-    <link href="css/main.css" rel="stylesheet">
+    <title>Sk8-Registro</title>
+    <link href="css/#" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/01e5ccde67.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
     <header class="main-header">
         <div class="main-header-top-bar">
@@ -50,68 +49,55 @@
         </nav>
     </header>
 
-    <div>
-        <img class= "bannerHome" src="/images/bannerHome.png">
-    </div>
+    <section>
+        <form class="form" action="/register" method="post" enctype="multipart/form">
+            <fieldset>
+                <label for="name"></label>
+                <input class="type" type="text" name="nombreCompleto" id="name" required placeholder="Nombre y apellido">
+                <span class="feedback"></span>
+            </fieldset>
 
-    <section class="main-content">
+            <fieldset>
+                <label for="user"></label>
+                <input class="type" type="text" name="user" id="user" required placeholder="Nombre de usuario">
+                <span class="feedback"></span>
+            </fieldset>
 
+            <fieldset>
+                <legend>Fecha de nacimiento</legend>
+                <input class="type"type="date" name="fecha" min="1950-01-01" max="2003-12-31" required>
+                <label for="fecha"></label>
+            </fieldset>
+                
+            <fieldset>
+                <label for="domicilio"></label>
+                <input class="type" type="text" name="domicilio" id="domicilio" required placeholder="Domicilio">
+                <span class="feedback"></span>
+            </fieldset>
+                 
+            <fieldset>
+                <legend>Imagen de perfil</legend>
+                <input type="file" name="fotoUsuario" accept=".jpg, .png">
+                <label for="fotoUsuario"></label>
+            </fieldset>
 
-        <h1>Destacados</h1>
+            <fieldset>
+                <legend>Deseás recibir el newsletter</legend>
+                <input type="radio" name="news" id="positive" required value="positive">
+                <label for="comprador">Sí</label>
+                <input type="radio" name="perfil" id="negative" required value="negative">
+                <label for="vendedor">No</label>
+            </fieldset>
+                
+            <fieldset>
+                <button class="botonEnviar" type="submit">Enviar</button>
+                <button class="botonBorrar" type="reset">Borrar todo</button>
+            </fieldset>
+                
 
-        <article class="product">
-            <img class="product-image" src="/images/tabla.png">
-            <h5 class="product-name">Tabla Guatambú</h5>
-            <p class="description">Tabla cóncava con doble kick</p>
-            <p class="price">$5.000</p>
-            <button class="buy">Comprar</button>
-        </article>
-
-        <article class="product">
-            <img class="product-image" src="/images/rueda.png">
-            <h5 class="product-name">Ruedas</h5>
-            <p class="description">Diametro 53mm</p>
-            <p class="price">$2.000</p>
-            <button class="buy">Comprar</button>
-        </article>
-
-        <article class="product">
-            <img class="product-image" src="/images/truck.png">
-            <h5 class="product-name">Trucks</h5>
-            <p class="description">Aluminio y ejes de acero templado.</p>
-            <p class="price">$3.000</p>
-            <button class="buy">Comprar</button>
-        </article>
-
-        <article class="product">
-            <img class="product-image" src="/images/skate.png">
-            <h5 class="product-name">Skate Armado</h5>
-            <p class="description">Tabla doble kick 8"</p>
-            <p class="price">$10.000</p>
-            <button class="buy">Comprar</button>
-        </article>
-        
+        </form>
     </section>
 
-    <section class="final-info">
-        <div>
-            <div class="icon"><i class="fas fa-credit-card"></i></div>
-            <h3>Pagá con tarjeta o en Mercado Pago</h3>
-            <p>Tenés cuotas sin interés con todas las tarjeta </p>
-        </div>
-        <div>
-            <div class="icon"><i class="fas fa-truck"></i></div>
-            <h3>Envíamos a todo el país</h3>
-            <p>Envío gratis en compras mayores a $6.000</p>
-        </div>
-        <div>
-            <div class="icon"><i class="fas fa-user-shield"></i></div>
-            <h3>Tu compra está protegida</h3>
-            <p>¿No te gusta? ¡Devolvelo, es así de fácil!</p>
-        </div>
-        
-    </section>
-    
     <footer>
         <article class="pay-method">
             <h6>Medios de pago</h6>
@@ -140,5 +126,7 @@
         </article>
 
     </footer>
+
+    
 </body>
 </html>
