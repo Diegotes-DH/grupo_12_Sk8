@@ -85,7 +85,6 @@ body {
 /*-----------------------Section--------------------------------*/
 
 section{
-    height:70vh;
     max-width: 90%;
     margin:auto;
 
@@ -112,6 +111,18 @@ fieldset{
     padding: 10px 5px;
 }
 
+.birthdate{
+    margin-top: 20px;
+}
+
+.user_image{
+    margin-top: 20px;
+}
+
+.newsletter{
+    margin-top: 20px;
+}
+
 .type{
     width: 100%;
     border: none;
@@ -132,16 +143,14 @@ fieldset{
     font-family: "Poppins";    
 }
 
-.createButton{
+.eraseButton{
     width: 100%;
     font-size:17px;
     border-radius: 5px;
     border: 1px solid #fe4a49;
     background-color:white;
     color: black;
-    font-family: "Poppins";
-    text-decoration: none;
-    text-align: center;    
+    font-family: "Poppins";    
 }
 
 /*-----------------------Footer--------------------------------*/
@@ -235,23 +244,18 @@ footer article ul{
 
     fieldset{
         display: flex;
-        justify-content:center;
         width:50%
+    }
+
+    .radio_option {
+        margin: 0px 30px 0px 5px
     }
 
     .sendButton{
         width: 50%;
     }
-    
-    .createButton{
-        width: 50%; 
+
+    .eraseButton{
+        width: 50%;
     }
-}
-
-
-
-/*-----------------------Desktop--------------------------------*/
-
-@media (min-width:1000px){
-
 }

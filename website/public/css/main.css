@@ -200,7 +200,6 @@ footer article ul{
     .hamburguer-button{
         display:none;
     }
-
     .search{
         display: block;
         flex-grow: 0.9;

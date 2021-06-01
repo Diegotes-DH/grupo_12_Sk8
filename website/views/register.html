@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sk8-Registro</title>
-    <link href="css/#" rel="stylesheet">
+    <link href="css/register.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/01e5ccde67.js" crossorigin="anonymous"></script>
@@ -51,6 +51,7 @@
 
     <section>
         <form class="form" action="/register" method="post" enctype="multipart/form">
+            <h3>Creá tu cuenta en un toque</h3>
             <fieldset>
                 <label for="name"></label>
                 <input class="type" type="text" name="nombreCompleto" id="name" required placeholder="Nombre y apellido">
@@ -63,7 +64,7 @@
                 <span class="feedback"></span>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="birthdate">
                 <legend>Fecha de nacimiento</legend>
                 <input class="type"type="date" name="fecha" min="1950-01-01" max="2003-12-31" required>
                 <label for="fecha"></label>
@@ -75,23 +76,26 @@
                 <span class="feedback"></span>
             </fieldset>
                  
-            <fieldset>
+            <fieldset class="user_image">
                 <legend>Imagen de perfil</legend>
                 <input type="file" name="fotoUsuario" accept=".jpg, .png">
                 <label for="fotoUsuario"></label>
             </fieldset>
 
-            <fieldset>
-                <legend>Deseás recibir el newsletter</legend>
+            <fieldset class="newsletter">
+                <legend>¿Deseás recibir el newsletter?</legend>
                 <input type="radio" name="news" id="positive" required value="positive">
-                <label for="comprador">Sí</label>
-                <input type="radio" name="perfil" id="negative" required value="negative">
-                <label for="vendedor">No</label>
+                <label class= radio_option for="positive">Sí, dale</label>
+                <input type="radio" name="news" id="negative" required value="negative">
+                <label class= radio_option for="negative">No, gracias</label>
             </fieldset>
                 
             <fieldset>
-                <button class="botonEnviar" type="submit">Enviar</button>
-                <button class="botonBorrar" type="reset">Borrar todo</button>
+                <button class="sendButton" type="submit">Confirmar</button>
+            </fieldset>
+
+            <fieldset>
+                <button class="eraseButton" type="reset">Borrar todo</button>
             </fieldset>
                 
 

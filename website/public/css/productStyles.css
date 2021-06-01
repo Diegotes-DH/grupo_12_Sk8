@@ -1,3 +1,7 @@
+/*
+verde= #3cff1e
+gris= #ebe9e9
+*/
 *{
     margin: 0px;
     padding: 0px;
@@ -18,7 +22,7 @@ body {
     padding: 0 10px;
     background-color: black;
     display:flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content:space-between;
 }
 
@@ -29,7 +33,6 @@ body {
     max-width: 20%;
     padding: 5px;
     margin: 10px;
-    align-self: center;
 }
 
 .logo{
@@ -81,71 +84,7 @@ body {
     display: inline-block;
     padding: 5px 0;
 }
-
-/*-----------------------Section--------------------------------*/
-
-section{
-    height:70vh;
-    max-width: 90%;
-    margin:auto;
-
-}
-
-form{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    width: 90%;
-    margin:auto;
-    padding: 10px;
-}
-
-h3{
-    margin-top: 20px;
-}
-
-fieldset{
-    border: none;
-    width: 100%;
-    padding: 10px 5px;
-}
-
-.type{
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    font-size: 17px;
-    padding: 5px;
-    font-family: "Poppins";
-    background-color:#ebe9eb;
-}
-
-.sendButton{
-    width: 100%;
-    font-size:17px;
-    border-radius: 5px;
-    border: 1px solid #3cff1e;
-    background-color:#3cff1e;
-    color: black;
-    font-family: "Poppins";    
-}
-
-.createButton{
-    width: 100%;
-    font-size:17px;
-    border-radius: 5px;
-    border: 1px solid #fe4a49;
-    background-color:white;
-    color: black;
-    font-family: "Poppins";
-    text-decoration: none;
-    text-align: center;    
-}
-
 /*-----------------------Footer--------------------------------*/
-
 footer{
     background-color: #ebe9eb;
     display: flex;
@@ -172,8 +111,58 @@ footer article ul{
     justify-content:space-around;
 }
 
-/*-----------------------Tablet--------------------------------*/
+/*----------------------section-product--------------------------*/
+section{
+    margin:auto;
+    max-width: auto;
+    padding: 10px;
+}
+.buy-now{
+    width: 100%;
+    margin: auto;
+    background-color: #3cff1e;
+    color: black;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.add-to-cart{
+    width: 100%;
+    margin: auto;
+    background-color:#ebe9e9;
+    color: black;
 
+}
+button{
+    display: block;
+    margin: 5px auto 0;
+    border-radius: 3px;
+    border-color: none;
+    appearance: none;
+    border-style: none;
+    padding: 5px 20px;
+    font-family: Poppins;
+}
+.right-bottom-section{
+    
+    text-align: center;
+}
+.product-image{
+    width: 100%;
+    margin: auto;
+}
+.product-relation{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 10px rgb( 100 , 100 , 100 );
+
+}
+.related-image{
+    width: 100%;
+    margin: auto;
+}
+
+/*****************************Queries*********************************/
 @media (min-width:600px){
 
     .main-header-top-bar{
@@ -183,6 +172,10 @@ footer article ul{
 
     .hamburguer-button{
         display:none;
+    }
+
+    .logo{
+        width:100px;
     }
 
     .search{
@@ -233,25 +226,49 @@ footer article ul{
 
     }
 
-    fieldset{
-        display: flex;
-        justify-content:center;
-        width:50%
-    }
-
-    .sendButton{
-        width: 50%;
-    }
-    
-    .createButton{
-        width: 50%; 
+    h1{
+        width: 100%;
+        font-size: 40px;
     }
 }
-
-
-
-/*-----------------------Desktop--------------------------------*/
-
-@media (min-width:1000px){
-
+@media(min-width:1000px){
+    .main-section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .right-section{
+        width: 40%;
+        margin-top: 10px;
+    }
+    .left-section{
+        width: 59%;
+    }
+    .rigth-top-section{
+        margin-top: 15%;
+        margin-bottom: 15%;
+    }
+    .right-middle-section{
+        margin-bottom: 15%;
+    }
+    .right-bottom-section{
+        margin-bottom: 15%;
+        text-align: left;
+    }
+    .buy-now{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .cod-postal{
+        width: 50%;
+        margin-top: 5px;
+    }
+    .relation{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .product-relation{
+        width: 30%;
+    }
+    
 }
