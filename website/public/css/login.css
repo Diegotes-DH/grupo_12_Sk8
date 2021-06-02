@@ -10,7 +10,7 @@ body {
 
 /*-----------------------Header--------------------------------*/
 
-.main-header{
+.main-navbar{
     background-color: #ebe9eb;
 }
 
@@ -133,15 +133,18 @@ fieldset{
 }
 
 .createButton{
-    width: 100%;
     font-size:17px;
-    border-radius: 5px;
-    border: 1px solid #fe4a49;
-    background-color:white;
     color: black;
     font-family: "Poppins";
     text-decoration: none;
-    text-align: center;    
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin:auto;    
 }
 
 /*-----------------------Footer--------------------------------*/
