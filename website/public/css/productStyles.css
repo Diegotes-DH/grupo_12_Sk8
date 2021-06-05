@@ -16,9 +16,18 @@ body {
 /*----------------------section-product--------------------------*/
 section{
     margin:auto;
-    max-width: auto;
+    max-width: 90%;
     padding: 10px;
 }
+.relation{
+    margin:auto;
+    max-width: 90%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .buy-now{
     width: 100%;
     margin: auto;
@@ -34,20 +43,33 @@ section{
     color: black;
 
 }
-button{
+.buy-now, .add-to-cart, .calculate{
     display: block;
-    margin: 5px auto 0;
+    margin: 20px auto;
     border-radius: 3px;
     border-color: none;
     appearance: none;
     border-style: none;
     padding: 5px 20px;
     font-family: Poppins;
+    max-width: 80%;
 }
+
+.cod-postal{
+    font-family: Poppins;
+    font-size: 1rem;
+    margin: auto;
+}
+
 .right-bottom-section{
-    
+    margin:20px;
     text-align: center;
 }
+
+.relatedProducts{
+    margin:20px;
+}
+
 .product-image{
     width: 100%;
     margin: auto;
@@ -55,7 +77,7 @@ button{
 .product-relation{
     width: 90%;
     margin: auto;
-    margin-bottom: 10px;
+    margin-top: 10px;
     box-shadow: 0px 0px 10px rgb( 100 , 100 , 100 );
 
 }
@@ -70,6 +92,12 @@ button{
         width: 100%;
         font-size: 40px;
     }
+    .calculate{
+        display:inline
+    }
+    .cod-postal{
+        margin: 10px;
+    }
 }
 @media(min-width:1000px){
     .main-section{
@@ -80,6 +108,7 @@ button{
         width: 40%;
         margin-top: 10px;
     }
+
     .left-section{
         width: 59%;
     }
@@ -91,22 +120,22 @@ button{
         margin-bottom: 15%;
     }
     .right-bottom-section{
-        margin-bottom: 15%;
+        margin: auto;
         text-align: left;
     }
-    .buy-now{
+    /*.buy-now{
         margin-top: 20px;
         margin-bottom: 20px;
-    }
+    }*/
     .cod-postal{
         width: 50%;
-        margin-top: 5px;
+        margin: 0px 10px 0px 0px;
     }
-    .relation{
+    /*.relation{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-    }
+    }*/
     .product-relation{
         width: 30%;
     }
