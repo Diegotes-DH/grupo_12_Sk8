@@ -10,10 +10,13 @@ app.use(express.static(path.resolve(__dirname, "./public")));
 app.get("/",(req,res)=> res.sendFile(path.resolve(__dirname, "./views", "index.html")));
 
 /*register*/
-app.get("/register",(req,res)=> res.sendFile(path.resolve(__dirname, "./views", "register.html")));
+app.get("/registro",(req,res)=> res.sendFile(path.resolve(__dirname, "./views", "register.html")));
 
 /*login*/
-app.get("/login",(req,res)=> res.sendFile(path.resolve(__dirname, "./views", "login.html")));
+app.get("/ingresa",(req,res)=> res.sendFile(path.resolve(__dirname, "./views", "login.html")));
 
 /*product detail*/
-app.get("/product",(req,res)=> res.sendFile(path.resolve(__dirname, "./views", "productDetail.html")));
+app.get("/producto",(req,res)=> res.sendFile(path.resolve(__dirname, "./views", "productDetail.html")));
+
+/*carrito*/
+app.get("/carrito",(req,res)=> res.sendFile(path.resolve(__dirname, "./views", "cart.html")));

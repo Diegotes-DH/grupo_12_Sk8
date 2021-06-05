@@ -8,79 +8,6 @@ body {
     font-family:Poppins, arial, helvetica;
 }
 
-/*-----------------------Header--------------------------------*/
-
-.main-navbar{
-    background-color: #ebe9eb;
-}
-
-.main-header-top-bar{
-    padding: 0 10px;
-    background-color: black;
-    display:flex;
-    flex-wrap: nowrap;
-    justify-content:space-between;
-}
-
-.hamburguer-button{
-    color:white;
-    text-align: center;
-    font-size: 18px;
-    max-width: 20%;
-    padding: 5px;
-    margin: 10px;
-    align-self: center;
-}
-
-.logo{
-    width: 100px;
-    margin: 10px;
-    box-sizing: border-box;
-    
-}
-
-.search{
-    align-self: center;
-    display: none;
-}
-
-.user{
-    color:white;
-    font-size: 12px;
-    text-align: center;
-    max-width: 20%;
-    align-self: center;
-    display: none;
-    margin: 10px;
-}
-
-.shopping-cart{
-    color:white;
-    font-size: 12px;
-    text-align: center;
-    max-width: 20%;
-    align-self: center;
-    margin: 10px;
-}
-
-.main-navbar{
-    padding: 10px;
-    display: none;
-}
-
-.main-navbar ul{
-    list-style: none;
-    font-size: 0.9rem;
-    margin: 0;
-    padding: 0;
-}
-
-.main-navbar a{
-    text-decoration: none;
-    color: black;
-    display: inline-block;
-    padding: 5px 0;
-}
 
 /*-----------------------Section--------------------------------*/
 
@@ -147,94 +74,10 @@ fieldset{
     margin:auto;    
 }
 
-/*-----------------------Footer--------------------------------*/
-
-footer{
-    background-color: #ebe9eb;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 10px;
-    text-align: center;
-    margin: 30px auto 0;
-
-}
-
-footer h6{
-    font-size: 15px;
-}
-
-footer article ul{
-    list-style: none;
-    font-size: 1rem;
-}
-
-.social-media ul{
-    list-style: none;
-    display: flex;
-    justify-content:space-around;
-}
 
 /*-----------------------Tablet--------------------------------*/
 
 @media (min-width:600px){
-
-    .main-header-top-bar{
-        padding: 0 20px;
-        justify-content:space-between;
-    }
-
-    .hamburguer-button{
-        display:none;
-    }
-
-    .search{
-        display: block;
-        flex-grow: 0.9;
-    }
-
-    .search input{
-        border: none;
-        border-radius:0;
-        width: 50%;
-        font-size: 15px;
-        font-family: Poppins;
-    }
-
-    .search p{
-        text-align: center;
-    }
-
-    .search button{
-        border: none;
-        border-radius:0;
-        font-size: 15px;
-        font-family: Poppins;
-        background-color:white;
-        color: grey;
-        text-align: center;
-
-    }
-
-    .user{
-        display: block;
-    }
-
-
-    .main-navbar{
-        display: block;
-
-    }
-
-    .main-navbar ul {
-        display: flex;
-        justify-content:space-around;
-    }
-
-    .main-navbar li {
-        margin: 10px 7px 5px;
-
-    }
 
     fieldset{
         display: flex;

@@ -4,7 +4,7 @@
   "description": "En este grupo vamos a estar trabajando en una tienda de ventas de Skates. La misma se llamará “Sk8”, y la propuesta de valor será entregar a nuestros clientes las herramientas necesarias para que cada uno pueda contar con un skate personalizado a su técnica y estilo.",
   "main": "app.js",
   "scripts": {
-    "test": "nodemon app.js -e css,html,js,mjs,png",
+    "test": "clear && nodemon app.js -e css,html,js,mjs,png",
     "start": "node app.js"
   },
   "repository": {

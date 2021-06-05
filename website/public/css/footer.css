@@ -1,0 +1,27 @@
+/*-----------------------Footer--------------------------------*/
+
+footer{
+    background-color: #ebe9eb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    text-align: center;
+    margin: 30px auto 0;
+
+}
+
+footer h6{
+    font-size: 15px;
+}
+
+footer article ul{
+    list-style: none;
+    font-size: 1rem;
+}
+
+.social-media ul{
+    list-style: none;
+    display: flex;
+    justify-content:space-around;
+}
