@@ -1,0 +1,98 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Poppins, arial, helvetica;
+    background-color: #ebebeb;
+}
+/*main*/
+main{
+    background-color: #ebebeb;
+    max-width: 900px;
+    margin: auto;
+}
+.main-name{
+    margin-left: 10px;
+}
+.article-pic{
+    width: 20%;
+}
+section article{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2px 7px 5px;
+}
+.right-part{
+    width: 80%;
+}
+.product-price{
+    width: 98%;
+    /* float: right;
+     */
+     text-align: right;
+}
+.article-bottom{
+    border-top: 1px solid #ebebeb;
+    width: 100%;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    text-align: center;
+    margin: 0% 5%;
+}
+.envio-section{
+    background-color: white;
+    margin: 5px 7px 1px;
+}
+.method{
+    width: 50%;
+    display: inline;
+}
+.pay-section{
+    background-color: white;
+    margin: 1px 7px 0px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.total{
+    width: 50%;
+}
+.final-price{
+    width: 48%;
+    text-align: right;
+
+}
+.cuotas{
+    width: 100%;
+    text-align: right;
+    color: grey;
+}
+.buy-now{
+    background-color: #1259c3;
+    color: white;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 75%;
+    height: 5vh;
+    border-radius: 3px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.buy-now:hover{
+    background-color: #0022AA;
+}
+/*footer*/
+
+/*queries*/
+@media(min-width:600px){
+    .buy-now{
+        max-width: 400px;
+    }
+}
