@@ -1,154 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sk8</title>
-    <link href="css/productStyles.css" rel="stylesheet">
-    <link href="css/header.css" rel="stylesheet">
-    <link href="css/footer.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/01e5ccde67.js" crossorigin="anonymous"></script>
-</head>
-<header class="main-header">
-    <div class="main-header-top-bar">
-        <a href="#" class="hamburguer-button">
-            <i class="fas fa-bars"></i>
-        </a>
-        <figure><a href="/"><img class="logo" src="/images/sk8-logo.png" alt="logo"></a></figure>
 
-        <form class="search" action="" method="post" target="_blank">
-            <p> 
-                <input  type="search" placeholder="Buscar productos"><button type="submit" value="Buscar"><i class="fas fa-search"></i></button>
-            </p>
-        </form>
-
-        <a href="/registro" class="user">
-            <i class="fas fa-user  fa-2x"></i>
-        </a>
-
-        <a href="/carrito" class="shopping-cart">
-            <i class="fas fa-shopping-cart  fa-2x"></i>
-        </a>
-        
-    </div>
-
-    <nav class="main-navbar">
-        <ul>
-            <li><a href="#">Mi primer Skate</a></li>
-            <li><a href="#">Skates</a></li>
-            <li><a href="#">Tablas</a></li>
-            <li><a href="#">Trucks</a></li>
-            <li><a href="#">Ruedas</a></li>
-            <li><a href="#">Rulemanes</a></li>
-            <li><a href="#">Lijas</a></li>
-            <li><a href="#">Accesorios</a></li>
-            <li><a href="#">Protecciones</a></li>
-        </ul>
-    </nav>
-</header>
-
-<section class="main-section">
-    <div class="left-section">
-        <p>Home/Skates/maple</p>
-        <h2 class="product-name">Skate Maple</h2>
-        <img class="product-image" src="/images/skate.png">
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sk8</title>
+        <link href="css/productStyles.css" rel="stylesheet">
+        <link href="css/header.css" rel="stylesheet">
+        <link href="css/footer.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/01e5ccde67.js" crossorigin="anonymous"></script>
+    </head>
+<body>
+    <header class="main-header">
+        <div class="main-header-top-bar">
+            <a href="#" class="hamburguer-button">
+                <i class="fas fa-bars"></i>
+            </a>
+            <figure><a href="/"><img class="logo" src="/images/sk8-logo.png" alt="logo"></a></figure>
     
-    <div class="right-section">
-        <article class="rigth-top-section">
+            <form class="search" action="" method="post" target="_blank">
+                <p> 
+                    <input  type="search" placeholder="Buscar productos"><button type="submit" class="searchButton"><i class="fas fa-search"></i></button>
+                </p>
+            </form>
+    
+            <a href="/ingresa" class="user">
+                <i class="fas fa-user  fa-2x"></i>
+            </a>
+    
+            <a href="/carrito" class="shopping-cart">
+                <i class="fas fa-shopping-cart  fa-2x"></i>
+            </a>
             
-            <h3 class="product-price">$10.000</h3>
-            <p class="price-detail">en 12x $833.34</p>
-            <a href="#" class="formas-pago">Ver los medios de pago</a>
-        </article>
-        
-        <article class="right-middle-section">
-            <label>Cantidad:</label>
-            <input type="number" name="cantidad" value="number">
-            <select name="cantidad">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select>
-            <button type="submit" value="buy-now" class="buy-now">Comprar ahora</button>
-            <button type="submit" value="add-to-cart" class="add-to-cart">Agregar al Carrito</button>
-        </article>
-
-        <article class="right-bottom-section">
-            <h4>Medios de Envio</h4>
-            <p>
-                <input type="number" name="codigo" placeholder="Tu codigo Postal" class="cod-postal"><button type="submit" class="calcular">Calcular</button>
-                
-            </p>
-            <a href="#" class="nose-codigo-postal">No se mi codigo Postal</a>
-        </article>
-
-    </div>
-    <div class="product-detail">
-        <h3>Detalle de Producto</h3>
-        <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. </p>
-
-    </div>
-
-</section>
- 
-<h2>Productos Relacionados</h2>
-<section class="relation">
+        </div>
     
-        <article class="product-relation">
-            <img  src="/images/rueda.png" class="related-image">
-            <button type="submit" value="add-to-cart" class="add-to-cart">Agregar al Carrito</button>
+        <nav class="main-navbar">
+            <ul>
+                <li><a href="#">Mi primer Skate</a></li>
+                <li><a href="#">Skates</a></li>
+                <li><a href="#">Tablas</a></li>
+                <li><a href="#">Trucks</a></li>
+                <li><a href="#">Ruedas</a></li>
+                <li><a href="#">Rulemanes</a></li>
+                <li><a href="#">Lijas</a></li>
+                <li><a href="#">Accesorios</a></li>
+                <li><a href="#">Protecciones</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="main-section">
+        <div class="left-section">
+            <p>Home/Skates/maple</p>
+            <h2 class="product-name">Skate Maple</h2>
+            <img class="product-image" src="/images/skate.png">
+        </div>
+        
+        <div class="right-section">
+            <article class="rigth-top-section">
+                
+                <h3 class="product-price">$10.000</h3>
+                <p class="price-detail">en 12x $833.34</p>
+                <a href="#" class="formas-pago">Ver los medios de pago</a>
+            </article>
+            
+            <article class="right-middle-section">
+                <label>Cantidad:</label>
+                <!--<input type="number" name="cantidad" value="number">--> 
+                <select name="cantidad">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <button type="submit" value="buy-now" class="buy-now">Comprar ahora</button>
+                <button type="submit" value="add-to-cart" class="add-to-cart">Agregar al Carrito</button>
+            </article>
+    
+            <article class="right-bottom-section">
+                <h4>Medios de Envio</h4>
+                <p>
+                    <input type="number" name="codigo" placeholder="Tu codigo Postal" class="cod-postal"><button type="submit" class="calculate">Calcular</button>
+                    
+                </p>
+                <a href="#" class="nose-codigo-postal">No se mi codigo Postal</a>
+            </article>
+    
+        </div>
+        <div class="product-detail">
+            <h3>Detalle de Producto</h3>
+            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. </p>
+    
+        </div>
+    
+    </section>
+     
+    <h2 class="relatedProducts">Productos Relacionados</h2>
+    
+    <section class="relation">
+
+            <article class="product-relation">
+                <img  src="/images/rueda.png" class="related-image">
+                <button type="submit" value="add-to-cart" class="add-to-cart">Agregar al Carrito</button>
+            </article>
+    
+            <article class="product-relation">
+                <img  src="/images/tabla.png" class="related-image">
+                <button type="submit" value="add-to-cart" class="add-to-cart">Agregar al Carrito</button>
+            </article>
+    
+            <article class="product-relation" >
+                <img  src="/images/truck.png" class="related-image">
+                <button type="submit" value="add-to-cart" class="add-to-cart">Agregar al Carrito</button>
+            </article>
+    
+    </section>
+    
+    <footer>
+        <article class="pay-method">
+            <h6>Medios de pago</h6>
+            <ul>
+                <li>Tarjetas</li>
+                <li>Mercado Pago</li>
+            </ul>
         </article>
-
-        <article class="product-relation">
-            <img  src="/images/tabla.png" class="related-image">
-            <button type="submit" value="add-to-cart" class="add-to-cart">Agregar al Carrito</button>
+    
+        <article class="social-media">
+            <h6>Redes Sociales</h6>
+            <ul>
+                <li><i class="fab fa-instagram fa-2x"></i></li>
+                <li><i class="fab fa-youtube fa-2x"></i></li>
+            </ul>
         </article>
-
-        <article class="product-relation" >
-            <img  src="/images/truck.png" class="related-image">
-            <button type="submit" value="add-to-cart" class="add-to-cart">Agregar al Carrito</button>
+    
+        <article class="contact">
+            <h6>Contacto</h6>
+            <ul>
+                <li>WhatsApp</li>
+                <li>e-mail</li>
+                <li>Local</li>
+            </ul>
+    
         </article>
-
-</section>
-
-<footer>
-    <article class="pay-method">
-        <h6>Medios de pago</h6>
-        <ul>
-            <li>Tarjetas</li>
-            <li>Mercado Pago</li>
-        </ul>
-    </article>
-
-    <article class="social-media">
-        <h6>Redes Sociales</h6>
-        <ul>
-            <li><i class="fab fa-instagram fa-2x"></i></li>
-            <li><i class="fab fa-youtube fa-2x"></i></li>
-        </ul>
-    </article>
-
-    <article class="contact">
-        <h6>Contacto</h6>
-        <ul>
-            <li>WhatsApp</li>
-            <li>e-mail</li>
-            <li>Local</li>
-        </ul>
-
-    </article>
-
-</footer>
+    
+    </footer>
 </body>
 </html>
