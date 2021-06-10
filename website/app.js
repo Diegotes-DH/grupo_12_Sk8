@@ -7,16 +7,16 @@ app.listen(3030, ()=>console.log("server start in http://localhost:3030"));
 
 app.use(express.static(path.resolve(__dirname, "./public")));
 /*home*/
-app.get("/",(req,res)=> res.sendFile(path.resolve(__dirname, "./views", "index.html")));
+app.get("/",(req,res)=> res.sendFile(path.resolve(__dirname, "./views", "index.ejs")));
 
 /*register*/
-app.get("/registro",(req,res)=> res.sendFile(path.resolve(__dirname, "./views", "register.html")));
+app.get("/registro",(req,res)=> res.sendFile(path.resolve(__dirname, "./views", "register.ejs")));
 
 /*login*/
-app.get("/ingresa",(req,res)=> res.sendFile(path.resolve(__dirname, "./views", "login.html")));
+app.get("/ingresa",(req,res)=> res.sendFile(path.resolve(__dirname, "./views", "login.ejs")));
 
 /*product detail*/
-app.get("/producto",(req,res)=> res.sendFile(path.resolve(__dirname, "./views", "productDetail.html")));
+app.get("/producto",(req,res)=> res.sendFile(path.resolve(__dirname, "./views", "productDetail.ejs")));
 
 /*carrito*/
-app.get("/carrito",(req,res)=> res.sendFile(path.resolve(__dirname, "./views", "cart.html")));
+app.get("/carrito",(req,res)=> res.sendFile(path.resolve(__dirname, "./views", "cart.ejs")));
