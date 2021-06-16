@@ -1,3 +1,20 @@
+# SPRINT 3
+
+# Qué hicimos bien
+Trabajamos con un retrotiming que nos ayudó a llegar a tiempo con la entrega del trabajo. El dividir y delegar las tareas nos ayudó a superar obstáculos. Tener contacto diario fue importante para estar siempre al día del estado del trabajo y saber qué nos faltaba por hacer.
+
+# Qué hicimos mal
+Sólo cumplimos con las consignas obligatorias y nos relajamos con las optativas. Para este sprint nos comprometemos a cumplir con todas.
+
+# Qué debemos empezar a hacer
+Revisar el código enviado en el sprint anterior para optimizar y ajustar lo que sea necesario.
+
+# Qué debemos dejar de hacer
+No relajarnos, los próximos sprints serán decisivos para el trabajo final y tenemos que cumplir con todas las consignas.
+
+
+# SPRINT 2
+
 # Qué tenemos que comenzar a hacer?
 Fijarnos tiempos para cumplir objetivos y pactar horarios para hacer revisiones en conjunto.
 
