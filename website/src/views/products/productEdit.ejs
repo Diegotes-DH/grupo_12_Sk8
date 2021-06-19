@@ -6,9 +6,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Edita el producto</title>
-        <link href="css/productEdition.css" rel="stylesheet">
-        <link href="css/header.css" rel="stylesheet">
-        <link href="css/footer.css" rel="stylesheet">
+        <link href="/css/productUpdate.css" rel="stylesheet">
+        <link href="/css/header.css" rel="stylesheet">
+        <link href="/css/footer.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/01e5ccde67.js" crossorigin="anonymous"></script>
@@ -18,11 +18,11 @@
     <%- include("../partials/header")%>
     <main>
         <section>
-            <form id="edit-form-product" action="/producto/:id/editar?_method=PUT" method="post" enctype="multipart/form-data">
+            <form id="form-product" action="/producto/:id/editar?_method=PUT" method="post" enctype="multipart/form-data">
                 <h3>Editá el producto</h3>
                 <fieldset>
                     <label for="product-name"></label>
-                    <input class="type" type="text" name="product-name" id="product-name" required placeholder="Nombre del producto">
+                    <input class="product-input" type="text" name="product-name" id="product-name" required placeholder="Nombre del producto">
                 </fieldset>
                 <fieldset>
                     <label for="product-brand">Marca:</label>
@@ -33,10 +33,10 @@
                 </fieldset>
                 <fieldset>
                     <label for="product-descript"></label>
-                    <input class="type" type="textarea" name="product-descript" id="product-descript" required placeholder="Descripcion">
+                    <input class="product-input" type="textarea" name="product-descript" id="product-descript" required placeholder="Descripcion">
                 </fieldset>
                 <fieldset>
-                    <label for="product-images"></label>
+                    <label for="product-images">Imagen de Producto:</label>
                     <input type="file" name="product-images" id="product-images" multiple>
                 </fieldset>
                 <fieldset>
@@ -54,15 +54,15 @@
                 </fieldset>
                 <fieldset>
                     <label for="product-colors">Colores:</label>
-                    <select name="product-colors" id="product-colors" required multiple>
+                    <select name="product-colors" id="product-colors" required>
                         <option value="1">Blanco</option>
                         <option value="2">Negro</option>
                         <option value="3">Verde</option>
                     </select>
                 </fieldset>
                 <fieldset>
-                    <label for="product-price">Precio:</label>
-                    <input type="text" name="product-price" id="product-price" required>
+                    <label id="product-price" for="product-price">Precio:</label>
+                    <input class="product-input" type="text" name="product-price" id="product-price" required placeholder="$$$">
                 </fieldset>
                 <fieldset>
                     <button id="sendButton" type="submit">Crear producto</button>

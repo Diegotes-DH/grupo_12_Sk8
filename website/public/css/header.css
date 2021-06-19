@@ -1,9 +1,9 @@
 
-.main-navbar{
+#main-navbar{
     background-color: #ebe9eb;
 }
 
-.main-header-top-bar{
+#main-header-top-bar{
     padding: 0 10px;
     background-color: black;
     display:flex;
@@ -11,7 +11,7 @@
     justify-content:space-between;
 }
 
-.hamburguer-button{
+#hamburguer-button{
     color:white;
     text-align: center;
     font-size: 18px;
@@ -21,18 +21,18 @@
     align-self: center;
 }
 
-.logo{
+#logo{
     width: 100px;
     margin: 10px;
     box-sizing: border-box;
 }
 
-.search{
+#search{
     align-self: center;
     display: none;
 }
 
-.user{
+#user{
     color:white;
     font-size: 12px;
     text-align: center;
@@ -42,7 +42,7 @@
     margin: 10px;
 }
 
-.shopping-cart{
+#shopping-cart{
     color:white;
     font-size: 12px;
     text-align: center;
@@ -51,19 +51,19 @@
     margin: 10px;
 }
 
-.main-navbar{
+#main-navbar{
     padding: 10px;
     display: none;
 }
 
-.main-navbar ul{
+#main-navbar ul{
     list-style: none;
     font-size: 0.9rem;
     margin: 0;
     padding: 0;
 }
 
-.main-navbar a{
+#main-navbar a{
     text-decoration: none;
     color: black;
     display: inline-block;
@@ -72,21 +72,21 @@
 
 
 @media (min-width:600px){
-    .main-header-top-bar{
+    #main-header-top-bar{
         padding: 0 20px;
         justify-content:space-between;
     }
 
-    .hamburguer-button{
+    #hamburguer-button{
         display:none;
     }
 
-    .search{
+    #search{
         display: block;
         flex-grow: 0.9;
     }
 
-    .search input{
+    #search input{
         border: none;
         border-radius:0;
         width: 50%;
@@ -94,11 +94,11 @@
         font-family: Poppins;
     }
 
-    .search p{
+    #search p{
         text-align: center;
     }
 
-    .searchButton{
+    #searchButton{
         border: none;
         border-radius:0;
         font-size: 15px;
@@ -109,22 +109,22 @@
 
     }
 
-    .user{
+    #user{
         display: block;
     }
 
 
-    .main-navbar{
+    #main-navbar{
         display: block;
 
     }
 
-    .main-navbar ul {
+    #main-navbar ul {
         display: flex;
         justify-content:space-around;
     }
 
-    .main-navbar li {
+    #main-navbar li {
         margin: 10px 7px 5px;
 
     }

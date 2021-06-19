@@ -20,8 +20,9 @@ footer article ul{
     font-size: 1rem;
 }
 
-.social-media ul{
+#social-media ul{
     list-style: none;
     display: flex;
     justify-content:space-around;
 }
+

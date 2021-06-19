@@ -52,19 +52,21 @@ a{
 .method{
     width: 50%;
     display: inline;
+    margin-left: 15px;
 }
 .pay-section{
     background-color: white;
     margin: 1px 7px 0px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around
 
 }
 .total{
-    width: 50%;
+    width: 45%;
 }
 .final-price{
-    width: 48%;
+    width: 45%;
     text-align: right;
 
 }
@@ -74,19 +76,23 @@ a{
     color: grey;
 }
 .buy-now{
-    background-color: #1259c3;
-    color: white;
+    background-color: #3cff1e;
+    color: black;
     margin: auto;
     margin-bottom: 10px;
     width: 75%;
     height: 5vh;
-    border-radius: 3px;
+    border-radius: 5px;
+    border: 1px solid #3cff1e;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    font-family: "Poppins";
+    font-size:17px; 
 }
+ 
 .buy-now:hover{
-    background-color: #0022AA;
+    background-color: #2eca16;
 }
 /*footer*/
 

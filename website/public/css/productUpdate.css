@@ -1,0 +1,92 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Poppins, arial, helvetica;
+}
+
+section{
+    max-width: 90%;
+    margin:auto;
+
+}
+
+#form-product{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin:auto;
+    padding: 10px;
+}
+
+h3{
+    margin-top: 20px;
+}
+
+fieldset{
+    border: none;
+    width: 100%;
+    padding: 10px 5px;
+}
+
+.product-input{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 5px;
+    font-family: "Poppins";
+    background-color:#ebe9eb;
+}
+
+select{
+    width: 100px;
+    margin-left: 10px;
+}
+
+#product-price{
+    margin-right:5px;
+}
+
+#sendButton{
+    width: 100%;
+    font-size:17px;
+    border-radius: 5px;
+    border: 1px solid #3cff1e;
+    background-color:#3cff1e;
+    color: black;
+    font-family: "Poppins";    
+}
+
+#eraseButton{
+    width: 100%;
+    font-size:17px;
+    border-radius: 5px;
+    border: 1px solid #fe4a49;
+    background-color:white;
+    color: black;
+    font-family: "Poppins";    
+}
+
+/*-----------------------Tablet--------------------------------*/
+
+@media (min-width:600px){
+    fieldset{
+        display: flex;
+        width:50%
+    }
+
+    #sendButton{
+        width: 50%;
+    }
+
+    #eraseButton{
+        width: 50%;
+    }
+}
