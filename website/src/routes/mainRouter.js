@@ -11,6 +11,10 @@ router.get("/ingresa",mainController.login);
 router.get("/producto", mainController.detail);
 /*cart*/
 router.get("/carrito", mainController.cart);
+/*product creation*/
+router.get("/producto/crear", mainController.productCreation);
+/*product edition*/
+router.get("/producto/editar", mainController.productEdition)
 
 
 

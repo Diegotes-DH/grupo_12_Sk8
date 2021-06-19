@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edita el producto</title>
+        <link href="css/productEdition.css" rel="stylesheet">
+        <link href="css/header.css" rel="stylesheet">
+        <link href="css/footer.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/01e5ccde67.js" crossorigin="anonymous"></script>
+    </head>
+
+<body>
+    <%- include("../partials/header")%>
+    <main>
+        <section>
+            <form id="edit-form-product" action="/producto/:id/editar?_method=PUT" method="post" enctype="multipart/form-data">
+                <h3>Editá el producto</h3>
+                <fieldset>
+                    <label for="product-name"></label>
+                    <input class="type" type="text" name="product-name" id="product-name" required placeholder="Nombre del producto">
+                </fieldset>
+                <fieldset>
+                    <label for="product-brand">Marca:</label>
+                    <select name="product-brand" id="product-brand" required >
+                        <option value="1">Marca 1</option>
+                        <option value="2">Marca 2</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <label for="product-descript"></label>
+                    <input class="type" type="textarea" name="product-descript" id="product-descript" required placeholder="Descripcion">
+                </fieldset>
+                <fieldset>
+                    <label for="product-images"></label>
+                    <input type="file" name="product-images" id="product-images" multiple>
+                </fieldset>
+                <fieldset>
+                    <label for="product-cat">Categoría:</label>
+                    <select name="product-cat" id="product-cat" required>
+                        <option value="1">Skates</option>
+                        <option value="2">Tablas</option>
+                        <option value="3">Trucks</option>
+                        <option value="4">Ruedas</option>
+                        <option value="5">Rulemanes</option>
+                        <option value="6">Lijas</option>
+                        <option value="7">Accesorios</option>
+                        <option value="8">Protecciones</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <label for="product-colors">Colores:</label>
+                    <select name="product-colors" id="product-colors" required multiple>
+                        <option value="1">Blanco</option>
+                        <option value="2">Negro</option>
+                        <option value="3">Verde</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <label for="product-price">Precio:</label>
+                    <input type="text" name="product-price" id="product-price" required>
+                </fieldset>
+                <fieldset>
+                    <button id="sendButton" type="submit">Crear producto</button>
+                </fieldset>
+        
+                <fieldset>
+                    <button id="eraseButton" type="reset">Borrar todo</button>
+                </fieldset>
+        </section>
+    </main>
+    <%- include("../partials/footer")%>
+</body>
+</html>
