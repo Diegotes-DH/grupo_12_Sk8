@@ -67,6 +67,10 @@ h1{
     font-family: Poppins;
 }
 
+.buy:hover{
+    background-color: #2eca16;
+}
+
 .final-info{
     display:flex;
     flex-wrap: wrap;

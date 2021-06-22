@@ -36,12 +36,20 @@ section{
     margin-bottom: 5px;
     margin-top: 5px;
 }
+
+.buy-now:hover{
+    background-color: #2eca16;
+}
+
 .add-to-cart{
     width: 100%;
     margin: auto;
     background-color:#ebe9e9;
     color: black;
+}
 
+.add-to-cart:hover{
+    background-color:#b8b2b2;
 }
 .buy-now, .add-to-cart, .calculate{
     display: block;
@@ -60,7 +68,9 @@ section{
     font-size: 1rem;
     margin: auto;
 }
-
+.calculate:hover{
+    background-color:#b8b2b2;
+}
 .right-bottom-section{
     margin:20px;
     text-align: center;
