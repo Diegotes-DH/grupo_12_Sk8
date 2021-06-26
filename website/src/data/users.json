@@ -1,5 +1,20 @@
 [
     {
-        "a":1
+        "id": 1,
+        "name": "Fran",
+        "lastname": "Astarloa",
+        "email": "astarloafrancisco@gmail.com",
+        "password": "12341234",
+        "category": "user",
+        "image": "user-defecto.png"
+    },
+    {
+        "id": 2,
+        "name": "Diego",
+        "lastname": "Testa",
+        "email": "testadiegom@gmail.com",
+        "password": "qwerty",
+        "category": "admin",
+        "image": "user-defecto.png"
     }
 ]

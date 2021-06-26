@@ -24,16 +24,8 @@ app.use(method("_method")) // ?_method=PUT
 const main = require("./routes/mainRouter")
 app.use(main);
 
-/*register*/
-// const register = require("./routes/mainRouter");
-// app.use(register);
+const products = require("./routes/productRouter");
+app.use("/producto", products);
 
-// /*login*/
-// const login = require("./routes/mainRouter");
-// app.use(login);
-
-// /*product detail*/
-// app.get("/producto",(req,res)=> res.sendFile(path.resolve(__dirname, "./views", "productDetail.ejs")));
-
-// /*carrito*/
-// app.get("/carrito",(req,res)=> res.sendFile(path.resolve(__dirname, "./views", "cart.ejs")));
+const users = require("./routes/usersRouter");
+app.use("/usuario", users);
