@@ -16,36 +16,38 @@
     <%- include("../partials/header")%>
 
         <section >
-            <form id= "form-product" action="/producto/crear" method= "POST" enctype="multipart/form-data">
+            <form id= "form-product" action="/producto/" method="post" enctype="multipart/form-data" >
 
             <h3>Creá el producto</h3>
 
             <fieldset>
                 <label for="product-name"></label>
-                <input class="product-input" type="text" name="product-name" id="product-name" required placeholder="Nombre del Producto">
+                <input class="product-input" type="text" name="productName" id="product-name" required placeholder="Nombre del Producto">
             </fieldset>
     
             <fieldset>
                 <label for="product-brand">Marca:</label>
-                <select name="product-brand" id="product-brand" required>
+                <select name="productBrand" id="product-brand" required>
+                    <option value="" selected disabled>Elegí una</option>
                     <option value="1">Marca 1</option>
                     <option value="2">Marca 2</option>
+                    <option value="3">Marca 3</option>
                 </select>
             </fieldset>
     
             <fieldset>
                 <label for="product-descript"></label>
-                <input class="product-input" type="textarea" name="product-descript" id="product-descript" required placeholder="Descripción">
+                <input class="product-input" type="textarea" name="productDescript" id="product-descript" required placeholder="Descripción">
             </fieldset>
     
             <fieldset>
                 <label for="product-images">Imagen de Producto:</label>
-                <input type="file" name="product-images" id="product-images" required multiple>
+                <input type="file" name="productImages" id="product-images" required >
             </fieldset>
     
             <fieldset>
                 <label for="product-cat">Categoria:</label>
-                <select name="product-cat" id="product-cat" required>
+                <select name="productCat" id="product-cat" required>
                     <option value="1">Skates</option>
                     <option value="2">Tablas</option>
                     <option value="3">Trucks</option>
@@ -59,7 +61,7 @@
     
             <fieldset>
                 <label for="product-colors">Colores:</label>
-                <select name="product-colors" id="product-colors" required>
+                <select name="productColors" id="product-colors" required multiple>
                     <option value="1">Blanco</option>
                     <option value="2">Negro</option>
                     <option value="3">Verde</option>
@@ -68,7 +70,7 @@
     
             <fieldset>
                 <label id="product-price" for="product-price">Precio:</label>
-                <input class="product-input" type="text" name="product-price" id="product-price" required placeholder ="$$$">
+                <input class="product-input" type="text" name="productPrice" id="product-price" required placeholder ="$$$">
             </fieldset>
     
             <fieldset>

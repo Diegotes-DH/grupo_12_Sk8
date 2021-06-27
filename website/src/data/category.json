@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "Skates"
+    },
+    {
+        "id": 2,
+        "name": "Tablas"
+    },
+    {
+        "id": 3,
+        "name": "Trucks"
+    },
+    {
+        "id": 4,
+        "name": "Ruedas"
+    },
+    {
+        "id": 5,
+        "name": "Rulemanes"
+    },
+    {
+        "id": 6,
+        "name": "Lijas"
+    },
+    {
+        "id": 7,
+        "name": "Accesorios"
+    },
+    {
+        "id": 8,
+        "name": "Protecciones"
+    }
+]

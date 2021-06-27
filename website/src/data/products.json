@@ -1,28 +1,41 @@
 [
-    {
-        "id": 1,
-        "name": "Skate armado",
-        "descript": "Tabla doble kick 8'",
-        "brand": 1,
-        "colors": [
-        1,
-        2
-        ],
-        "image": "skate.png", 
-        "category": "Skates",
-        "price": "$10000"
-    },
-    {
-        "id": 2,
-        "name": "Tabla guatambú",
-        "descript": "Tabla cóncava con doble kick",
-        "brand": 2,
-        "colors": [
-        2,
-        3
-        ],
-        "image": "tabla.png",
-        "category":"Tablas",
-        "price": "$5000"
-    }
+  {
+    "id": 1,
+    "name": "Skate armado",
+    "descript": "Tabla doble kick 8'",
+    "brand": 1,
+    "colors": [
+      1,
+      2
+    ],
+    "image": "skate.png",
+    "category": 1,
+    "price": "$10000"
+  },
+  {
+    "id": 2,
+    "name": "Tabla guatambú",
+    "descript": "Tabla cóncava con doble kick",
+    "brand": 2,
+    "colors": [
+      2,
+      3
+    ],
+    "image": "tabla.png",
+    "category": 2,
+    "price": "$5000"
+  },
+  {
+    "id": 3,
+    "name": "Rueda",
+    "descript": "Rueda 53 mm",
+    "brand": 3,
+    "image": "productImages-1624809996381.png",
+    "category": 4,
+    "colors": [
+      2,
+      3
+    ],
+    "price": "$3000"
+  }
 ]
