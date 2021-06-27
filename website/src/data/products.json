@@ -28,12 +28,11 @@
   {
     "id": 3,
     "name": "Rueda",
-    "descript": "Rueda 53 mm",
-    "brand": 3,
-    "image": "productImages-1624809996381.png",
+    "descript": "44 pulgadas",
+    "brand": 1,
     "category": 4,
     "colors": [
-      2,
+      1,
       3
     ],
     "price": "$3000"

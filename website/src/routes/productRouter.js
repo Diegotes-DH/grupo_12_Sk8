@@ -26,6 +26,7 @@ router.get("/:id", productsController.detail);
 /*new product send*/
 router.post("/",upload.single("productImages"), productController.save)            
 /*edit product send*/
+router.put("/", upload.single("productImages"),productsController.edit)
 //PUT, accion de edicion
 /*delete product*/
 //accion de borrado, DELETE. "/:id"

@@ -21,7 +21,7 @@ const model = {
                 return color
             })
             return element
-        }).map(elements => {
+        }).map(element => {
             element.category = categoryModel.one(element.category)
             return element
         })
@@ -35,7 +35,7 @@ const model = {
             name: data.productName,
             descript: data.productDescript,
             brand: parseInt(data.productBrand),
-            image: file.filename,
+            image: file.fileName,
             category: parseInt(data.productCat),
             colors: data.productColors.map(color => parseInt(color)),
             price: data.productPrice
@@ -43,10 +43,31 @@ const model = {
         productos.push(nuevo);
         fs.writeFileSync(directory,JSON.stringify(productos,null,2));
         return true;
+    },
+    edit: function (data, file, id) {
+        const directory = path.resolve(__dirname, "../data", "products.json");
+        let productos = this.all();
+        productos.map(producto => {
+            if(producto.id == id){
+                producto.name = data.productName,
+                producto.descript = data.productDescript,
+                producto.brand = parseInt(data.productBrand),
+                producto.image = file.fileName,
+                producto.category = parseInt(data.productCat),
+                producto.colors = data.productColors.map(color => parseInt(color)),
+                producto.price = data.productPrice
+                return producto
+            }
+            return producto
+        })
+        fs.writeFileSync(directory,JSON.stringify(productos,null,2));
+        return true;
+    },
+    one: function(id){
+    let productos = this.allWithExtra();
+    let resultado = productos.find(producto => producto.id == id)
+    return resultado
     }
-    // one: function(id){
-    //     let productos = this.allWithExtra();
-    // }
 }
 
 module.exports = model;
