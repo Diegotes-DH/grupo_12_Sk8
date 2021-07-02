@@ -27,7 +27,7 @@ const model = {
         })
         return productos;
     },
-    new: function (data,file){
+    new: function (data,files){
         const directory = path.resolve(__dirname, "../data", "products.json");
         let productos = this.all();
         let nuevo = {
@@ -35,7 +35,7 @@ const model = {
             name: data.productName,
             descript: data.productDescript,
             brand: parseInt(data.productBrand),
-            image: file.fileName,
+            image: files.map(image => image.filename),
             category: parseInt(data.productCat),
             colors: data.productColors.map(color => parseInt(color)),
             price: data.productPrice
@@ -44,7 +44,7 @@ const model = {
         fs.writeFileSync(directory,JSON.stringify(productos,null,2));
         return true;
     },
-    edit: function (data, file, id) {
+    update: function (data, file, id) {
         const directory = path.resolve(__dirname, "../data", "products.json");
         let productos = this.all();
         productos.map(producto => {
@@ -52,7 +52,7 @@ const model = {
                 producto.name = data.productName,
                 producto.descript = data.productDescript,
                 producto.brand = parseInt(data.productBrand),
-                producto.image = file.fileName,
+                producto.image = files.map(image => image.filename),
                 producto.category = parseInt(data.productCat),
                 producto.colors = data.productColors.map(color => parseInt(color)),
                 producto.price = data.productPrice
@@ -67,6 +67,17 @@ const model = {
     let productos = this.allWithExtra();
     let resultado = productos.find(producto => producto.id == id)
     return resultado
+    },
+    delete: function(id) {
+        const directory = path.resolve(__dirname,"../data","products.json")
+        let productos = this.all();
+        let deleted = this.one(id);
+        // eliminamos la imagen de la carpeta upload
+        fs.unlinkSync(path.resolve(__dirname,"../../public/uploads/products",deleted.image))
+        // filtarmos el producto que deaseamos eliminar
+        productos = productos.filter(producto => producto.id != deleted.id )
+        fs.writeFileSync(directory,JSON.stringify(productos,null,2));
+        return true;
     }
 }
 

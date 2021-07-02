@@ -24,12 +24,13 @@ router.get("/:id/editar", productsController.edition);
 /*detail*/
 router.get("/:id", productsController.detail);
 /*new product send*/
-router.post("/",upload.single("productImages"), productController.save)            
+router.post("/",upload.any(), productController.save)            
 /*edit product send*/
-router.put("/", upload.single("productImages"),productsController.edit)
+router.put("/:id", upload.any(), productController.update)
 //PUT, accion de edicion
 /*delete product*/
-//accion de borrado, DELETE. "/:id"
+router.delete("/:id", productController.delete)
+// //accion de borrado, DELETE. "/:id"
 
 
 

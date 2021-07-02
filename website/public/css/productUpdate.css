@@ -14,7 +14,7 @@ section{
 
 }
 
-#form-product{
+.form-product{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -74,6 +74,18 @@ select{
     font-family: "Poppins";    
 }
 
+#deleteButton{
+    margin: auto;
+    font-size:17px;
+    border-radius: 5px;
+    border: 1px solid red;
+    background-color:red;
+    color:white;
+    font-family: "Poppins";   
+    display: flex;
+    justify-content: center
+}
+
 /*-----------------------Tablet--------------------------------*/
 
 @media (min-width:600px){
@@ -89,4 +101,5 @@ select{
     #eraseButton{
         width: 50%;
     }
+
 }

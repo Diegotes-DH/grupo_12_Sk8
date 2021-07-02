@@ -18,17 +18,18 @@
     <%- include("../partials/header")%>
     <main>
         <section>
-            <form id="form-product" action="/producto/?_method=PUT" method="post" enctype="multipart/form-data">
+            <form class="form-product" action="/producto/<%= product.id%>?_method=PUT" method="post" enctype="multipart/form-data">
                 <h3>Editá el producto</h3>
                 <fieldset>
                     <label for="product-name"></label>
-                    <input class="product-input" type="text" name="productName" id="product-name" required placeholder="Nombre del producto">
+                    <input class="product-input" type="text" name="productName" id="product-name" required placeholder="Nombre del producto" value="<%= product.name %> ">
                 </fieldset>
                 <fieldset>
                     <label for="product-brand">Marca:</label>
                     <select name="productBrand" id="product-brand" required >
                         <option value="1">Marca 1</option>
                         <option value="2">Marca 2</option>
+                        <option value="3">Marca 3</option>
                     </select>
                 </fieldset>
                 <fieldset>
@@ -42,7 +43,7 @@
                 <fieldset>
                     <label for="product-cat">Categoría:</label>
                     <select name="productCat" id="product-cat" required>
-                        <option value="1">Skates</option>
+                        <option value="1" <%= product.category.id == 1 ? "selected":null %>>Skates</option>
                         <option value="2">Tablas</option>
                         <option value="3">Trucks</option>
                         <option value="4">Ruedas</option>
@@ -65,12 +66,22 @@
                     <input class="product-input" type="text" name="productPrice" id="product-price" required placeholder="$$$">
                 </fieldset>
                 <fieldset>
-                    <button id="sendButton" type="submit">Crear producto</button>
+                    <button id="sendButton" type="submit">Editar el producto</button>
                 </fieldset>
         
                 <fieldset>
                     <button id="eraseButton" type="reset">Borrar todo</button>
                 </fieldset>
+                </form>
+                <fieldset>
+                    <form class="form-product" action="/producto/<%= product.id%>?_method=DELETE" method="post">
+                        <button id="deleteButton" type="submit">delete</button>
+                    </form>
+                    </fieldset>
+        </section>
+
+        <section>
+            
         </section>
     </main>
     <%- include("../partials/footer")%>
