@@ -23,38 +23,21 @@
 
 
         <h1>Destacados</h1>
+        <% list.forEach(product => { %>
+            <article class="product">
+                <% if (product.image) { %>
+                    <figure><img class="product-image" src="/uploads/products/<%= product.image[0]%>" alt=""></figure>
+                <% } else { %>
+                    <figure><img class="product-image" src="/images/sk8-logo.png" alt=""></figure>
+                <% } %>
+                
+                    <h5 class="product-name"><%= product.name %></h5>
+                    <p class="description"><%= product.descript %></p>
+                    <p class="price"><%= product.price %></p>
+                    <button class="buy">Comprar</button>
 
-        <article class="product">
-            <img class="product-image" src="/images/tabla.png">
-            <h5 class="product-name">Tabla Guatambú</h5>
-            <p class="description">Tabla cóncava con doble kick</p>
-            <p class="price">$5.000</p>
-            <button class="buy">Comprar</button>
-        </article>
-
-        <article class="product">
-            <img class="product-image" src="/images/rueda.png">
-            <h5 class="product-name">Ruedas</h5>
-            <p class="description">Diametro 53mm</p>
-            <p class="price">$2.000</p>
-            <button class="buy">Comprar</button>
-        </article>
-
-        <article class="product">
-            <img class="product-image" src="/images/truck.png">
-            <h5 class="product-name">Trucks</h5>
-            <p class="description">Aluminio y ejes de acero templado.</p>
-            <p class="price">$3.000</p>
-            <button class="buy">Comprar</button>
-        </article>
-
-        <article class="product">
-            <img class="product-image" src="/images/skate.png">
-            <h5 class="product-name">Skate Armado</h5>
-            <p class="description">Tabla doble kick 8"</p>
-            <p class="price">$10.000</p>
-            <button class="buy">Comprar</button>
-        </article>
+            </article>
+        <% }) %>
         
     </section>
 

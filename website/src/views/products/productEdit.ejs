@@ -25,32 +25,35 @@
                     <input class="product-input" type="text" name="productName" id="product-name" required placeholder="Nombre del producto" value="<%= product.name %> ">
                 </fieldset>
                 <fieldset>
-                    <label for="product-brand">Marca:</label>
-                    <select name="productBrand" id="product-brand" required >
-                        <option value="1">Marca 1</option>
-                        <option value="2">Marca 2</option>
-                        <option value="3">Marca 3</option>
-                    </select>
+                        <label for="product-brand">Marca:</label>
+                        <select name="productBrand" id="product-brand" required>
+                            <% brands.forEach(brand => { %>
+                                <% if (product.brand.id == brand.id) { %>
+                                    <option value="<%= brand.id %>" selected><%= brand.name %></option>
+                                <% } else { %>
+                                    <option value="<%= brand.id %>"><%= brand.name %></option>
+                                <% } %>
+                            <% }) %>
+                        </select>
                 </fieldset>
                 <fieldset>
                     <label for="product-descript"></label>
-                    <input class="product-input" type="textarea" name="productDescript" id="product-descript" required placeholder="Descripcion">
+                    <input class="product-input" type="textarea" name="productDescript" id="product-descript" required placeholder="Descripcion" value="<%= product.descript %>">
                 </fieldset>
                 <fieldset>
                     <label for="product-images">Imagen de Producto:</label>
-                    <input type="file" name="productImages" id="product-images">
+                    <input type="file" name="productImages" id="product-images" required multiple>
                 </fieldset>
                 <fieldset>
                     <label for="product-cat">Categoría:</label>
                     <select name="productCat" id="product-cat" required>
-                        <option value="1" <%= product.category.id == 1 ? "selected":null %>>Skates</option>
-                        <option value="2">Tablas</option>
-                        <option value="3">Trucks</option>
-                        <option value="4">Ruedas</option>
-                        <option value="5">Rulemanes</option>
-                        <option value="6">Lijas</option>
-                        <option value="7">Accesorios</option>
-                        <option value="8">Protecciones</option>
+                        <% category.forEach(category => { %>
+                            <% if (product.category.id == category.id) { %>
+                                <option value="<%= category.id %>" selected><%= category.name %></option>
+                            <% } else { %>
+                                <option value="<%= category.id %>"><%= category.name %></option>
+                            <% } %>
+                        <% }) %>
                     </select>
                 </fieldset>
                 <fieldset>
@@ -63,7 +66,7 @@
                 </fieldset>
                 <fieldset>
                     <label id="product-price" for="product-price">Precio:</label>
-                    <input class="product-input" type="text" name="productPrice" id="product-price" required placeholder="$$$">
+                    <input class="product-input" type="text" name="productPrice" id="product-price" required placeholder="$$$" value="<%= product.price %>">
                 </fieldset>
                 <fieldset>
                     <button id="sendButton" type="submit">Editar el producto</button>

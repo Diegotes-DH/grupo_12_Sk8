@@ -44,7 +44,7 @@ const model = {
         fs.writeFileSync(directory,JSON.stringify(productos,null,2));
         return true;
     },
-    update: function (data, file, id) {
+    update: function (data, files, id) {
         const directory = path.resolve(__dirname, "../data", "products.json");
         let productos = this.all();
         productos.map(producto => {
@@ -73,7 +73,9 @@ const model = {
         let productos = this.all();
         let deleted = this.one(id);
         // eliminamos la imagen de la carpeta upload
-        fs.unlinkSync(path.resolve(__dirname,"../../public/uploads/products",deleted.image))
+        deleted.image.forEach(image => {
+            fs.unlinkSync(path.resolve(__dirname,"../../public/uploads/products",image))
+        });
         // filtarmos el producto que deaseamos eliminar
         productos = productos.filter(producto => producto.id != deleted.id )
         fs.writeFileSync(directory,JSON.stringify(productos,null,2));

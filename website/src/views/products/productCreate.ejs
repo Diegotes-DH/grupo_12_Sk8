@@ -29,9 +29,11 @@
                 <label for="product-brand">Marca:</label>
                 <select name="productBrand" id="product-brand" required>
                     <option value="" selected disabled>Elegí una</option>
-                    <option value="1">Marca 1</option>
-                    <option value="2">Marca 2</option>
-                    <option value="3">Marca 3</option>
+                    <% brands.forEach(brand => { %>
+                        <option value="<%= brand.id %>">
+                            <%= brand.name %>
+                        </option>
+                    <% }) %>
                 </select>
             </fieldset>
     
@@ -46,25 +48,25 @@
             </fieldset>
     
             <fieldset>
-                <label for="product-cat">Categoria:</label>
+                <label for="product-cat">Categoría:</label>
                 <select name="productCat" id="product-cat" required>
-                    <option value="1">Skates</option>
-                    <option value="2">Tablas</option>
-                    <option value="3">Trucks</option>
-                    <option value="4">Ruedas</option>
-                    <option value="5">Rulemanes</option>
-                    <option value="6">Lijas</option>
-                    <option value="7">Accesorios</option>
-                    <option value="8">Protecciones</option>
+                    <% category.forEach(category => { %>
+                        <option value="" selected disabled>Elegí una</option>
+                        <option>
+                            <%= category.name %>
+                        </option>
+                    <% }) %>
                 </select>
             </fieldset>
     
             <fieldset>
                 <label for="product-colors">Colores:</label>
                 <select name="productColors" id="product-colors" required multiple>
-                    <option value="1">Blanco</option>
-                    <option value="2">Negro</option>
-                    <option value="3">Verde</option>
+                    <% colors.forEach(color => { %>
+                        <option value="<%= color.id %>">
+                            <%= color.name %>
+                        </option>
+                    <% }) %>
                 </select>
             </fieldset>
     

@@ -1,28 +1,17 @@
 [
   {
     "id": 1,
-    "name": "Skate armado",
-    "descript": "Tabla doble kick 8'",
-    "brand": 1,
+    "name": "Rueda ",
+    "descript": "Rueda 53 mm",
+    "brand": 2,
+    "image": [
+      "productImages-1625246373466.png"
+    ],
+    "category": 1,
     "colors": [
       1,
       2
     ],
-    "image": "skate.png",
-    "category": 1,
-    "price": "$10000"
-  },
-  {
-    "id": 2,
-    "name": "Tabla guatambú",
-    "descript": "Tabla cóncava con doble kick",
-    "brand": 2,
-    "colors": [
-      2,
-      3
-    ],
-    "image": "tabla.png",
-    "category": 2,
-    "price": "$5000"
+    "price": "$3000"
   }
 ]

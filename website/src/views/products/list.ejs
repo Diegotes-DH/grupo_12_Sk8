@@ -14,7 +14,23 @@
 <body>
     <%- include("../partials/header")%>
 
-    <section id=""></section>
+    <section id="">
+        <% list.forEach(product => { %>
+            <article>
+                <% if (product.image) { %>
+                    <figure><img src="/uploads/products/<%= product.image[0]%>" alt=""></figure>
+                <% } else { %>
+                    <figure><img src="/images/sk8-logo.png" alt=""></figure>
+                <% } %>
+                <section>
+                    <h2><%= product.name %></h2>
+                    <h4><%= product.descript %></h4>
+                    <a href="/producto/<%= product.id %>">Ver producto</a>
+                </section>
+            </article>
+        <% }) %>
+
+    </section>
 
 
 
