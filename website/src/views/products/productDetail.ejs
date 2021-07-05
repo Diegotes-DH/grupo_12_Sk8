@@ -16,8 +16,8 @@
 <body>
     <%- include("../partials/header")%>
     
-    <section class="main-section">
-        <div class="left-section">
+    <section id="main-section">
+        <div id="left-section">
             <p class="route-to-product"></p>
             <h2 class="product-name"><%= product.name %> </h2>
             <h4 class="product-name"><%= product.brand.name %></h4>
@@ -25,22 +25,22 @@
                 <figure><img class="product-image" src="/uploads/products/<%= product.image%>" alt=""></figure>
             <% } else { %>
                 <figure><img class="product-image" src="/images/default.jpg" alt=""></figure>
-            <% } %>
+            <% } %> 
             
         </div>
         
-        <div class="right-section">
-            <article class="rigth-top-section">
+        <div id="right-section">
+            <article id="rigth-top-section">
                 
                 <h3 class="product-price"><%= product.price %> </h3>
                 <p class="price-detail">6/12 cuotas sin interes</p>
                 <a href="#" class="formas-pago">Ver los medios de pago</a>
             </article>
             
-            <article class="right-middle-section">
-                <label>Elegí el color</label>
+            <article id="right-middle-section">
+                <label class="labels">Elegí el color</label>
                 <% product.colors.forEach(color => { %>
-                    <fieldset>
+                    <fieldset id="pick-color">
                         <input type="radio" name="color" required id="color-<%= color.id %>" value="<%= color.id %>"/>
                         <label for="color-<%= color.id %>">
                             <%= color.name %>
@@ -48,13 +48,16 @@
                     </fieldset>
                 <% }) %>
                 
-                <label>Cantidad:</label>
+                <label class="labels">Cantidad:</label>
                 <input type="number" min="1" max="5" value="1" required>
+            </article>
+
+            <article>
                 <button type="submit" value="buy-now" class="buy-now">Comprar ahora</button>
                 <button type="submit" value="add-to-cart" class="add-to-cart">Agregar al Carrito</button>
             </article>
     
-            <article class="right-bottom-section">
+            <article id="right-bottom-section">
                 <h4>Medios de Envio</h4>
                 <p>
                     <input type="number" name="codigo" placeholder="Tu codigo Postal" class="cod-postal"><button type="submit" class="calculate">Calcular</button>
@@ -74,7 +77,7 @@
     
     <h2 class="relatedProducts">Productos Relacionados</h2>
     
-    <section class="relation">
+    <section id="relation">
 
             <article class="product-relation">
                 <img  src="/images/rueda.png" class="related-image">

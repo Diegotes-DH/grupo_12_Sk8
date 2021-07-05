@@ -19,13 +19,31 @@ section{
     max-width: 90%;
     padding: 10px;
 }
-.relation{
+#rigth-top-section{
+    margin-bottom: 5%;
+}
+#right-middle-section{
+    margin-bottom: 5%;
+}
+#right-bottom-section{
+    margin-bottom: 5%;
+}
+
+#relation{
     margin:auto;
     max-width: 90%;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.labels{
+    font-weight: bold;
+}
+
+#pick-color{
+    border: none
 }
 
 .buy-now{
@@ -71,7 +89,7 @@ section{
 .calculate:hover{
     background-color:#b8b2b2;
 }
-.right-bottom-section{
+#right-bottom-section{
     margin:20px;
     text-align: center;
 }
@@ -110,26 +128,26 @@ section{
     }
 }
 @media(min-width:1000px){
-    .main-section{
+    #main-section{
         display: flex;
         flex-wrap: wrap;
     }
-    .right-section{
+    #right-section{
         width: 40%;
         margin-top: 10px;
     }
 
-    .left-section{
+    #left-section{
         width: 59%;
     }
-    .rigth-top-section{
+    #rigth-top-section{
         margin-top: 15%;
         margin-bottom: 15%;
     }
-    .right-middle-section{
+    #right-middle-section{
         margin-bottom: 15%;
     }
-    .right-bottom-section{
+    #right-bottom-section{
         margin: auto;
         text-align: left;
     }
@@ -146,6 +164,9 @@ section{
         flex-wrap: wrap;
         justify-content: space-around;
     }*/
+    .product-image{
+        width: 80%;
+    }
     .product-relation{
         width: 30%;
     }

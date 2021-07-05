@@ -69,18 +69,21 @@
                     <input class="product-input" type="text" name="productPrice" id="product-price" required placeholder="$$$" value="<%= product.price %>">
                 </fieldset>
                 <fieldset>
-                    <button id="sendButton" type="submit">Editar el producto</button>
+                    <button id="sendButton" type="submit">Editar producto</button>
                 </fieldset>
         
                 <fieldset>
                     <button id="eraseButton" type="reset">Borrar todo</button>
                 </fieldset>
                 </form>
-                <fieldset>
-                    <form class="form-product" action="/producto/<%= product.id%>?_method=DELETE" method="post">
-                        <button id="deleteButton" type="submit">delete</button>
-                    </form>
+                
+                <form class="form-product" action="/producto/<%= product.id%>?_method=DELETE" method="post">    
+                    <fieldset>
+                        <button id="deleteButton" type="submit">Eliminar producto</button>
                     </fieldset>
+                    
+                </form>
+            
         </section>
 
         <section>

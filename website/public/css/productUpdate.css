@@ -12,7 +12,7 @@ section{
     max-width: 90%;
     margin:auto;
 
-}
+} 
 
 .form-product{
     display: flex;
@@ -70,20 +70,18 @@ select{
     border-radius: 5px;
     border: 1px solid #fe4a49;
     background-color:white;
-    color: black;
+    color: #fe4a49;
     font-family: "Poppins";    
 }
 
 #deleteButton{
-    margin: auto;
+    width: 100%;
     font-size:17px;
     border-radius: 5px;
-    border: 1px solid red;
-    background-color:red;
-    color:white;
-    font-family: "Poppins";   
-    display: flex;
-    justify-content: center
+    border: 1px solid #f80a0a;
+    background-color:#f80a0a;
+    color: white;
+    font-family: "Poppins";  
 }
 
 /*-----------------------Tablet--------------------------------*/
@@ -99,6 +97,10 @@ select{
     }
 
     #eraseButton{
+        width: 50%;
+    }
+
+    #deleteButton{
         width: 50%;
     }
 
