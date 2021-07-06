@@ -18,7 +18,7 @@
     <%- include("../partials/header")%>
     <main>
         <section>
-            <form class="form-product" action="/producto/<%= product.id%>?_method=PUT" method="post" enctype="multipart/form-data">
+            <form id="form-product" action="/producto/<%= product.id%>?_method=PUT" method="post" enctype="multipart/form-data">
                 <h3>Editá el producto</h3>
                 <fieldset>
                     <label for="product-name"></label>
@@ -77,7 +77,7 @@
                 </fieldset>
                 </form>
                 
-                <form class="form-product" action="/producto/<%= product.id%>?_method=DELETE" method="post">    
+                <form id="form-product" action="/producto/<%= product.id%>?_method=DELETE" method="post">    
                     <fieldset>
                         <button id="deleteButton" type="submit">Eliminar producto</button>
                     </fieldset>

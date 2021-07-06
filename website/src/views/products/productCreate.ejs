@@ -11,79 +11,79 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/01e5ccde67.js" crossorigin="anonymous"></script>
-    </head>
+    </head> 
 <body>
     <%- include("../partials/header")%>
 
-        <section >
-            <form id= "form-product" action="/producto/" method="post" enctype="multipart/form-data" >
+        <section>
+         
+            <form id= "form-product" action="/producto/" method="post" enctype="multipart/form-data">
+                <h3>Creá el producto</h3>
 
-            <h3>Creá el producto</h3>
-
-            <fieldset>
-                <label for="product-name"></label>
-                <input class="product-input" type="text" name="productName" id="product-name" required placeholder="Nombre del Producto">
-            </fieldset>
-    
-            <fieldset>
-                <label for="product-brand">Marca:</label>
-                <select name="productBrand" id="product-brand" required>
-                    <option value="" selected disabled>Elegí una</option>
-                    <% brands.forEach(brand => { %>
-                        <option value="<%= brand.id %>">
-                            <%= brand.name %>
-                        </option>
-                    <% }) %>
-                </select>
-            </fieldset>
-    
-            <fieldset>
-                <label for="product-descript"></label>
-                <input class="product-input" type="textarea" name="productDescript" id="product-descript" required placeholder="Descripción">
-            </fieldset>
-    
-            <fieldset>
-                <label for="product-images">Imagen de Producto:</label>
-                <input type="file" name="productImages" id="product-images" required multiple>
-            </fieldset>
-    
-            <fieldset>
-                <label for="product-cat">Categoría:</label>
-                <select name="productCat" id="product-cat" required>
-                    <% category.forEach(category => { %>
+                <fieldset>
+                    <label for="product-name"></label>
+                    <input class="product-input" type="text" name="productName" id="product-name" required placeholder="Nombre del Producto">
+                </fieldset>
+        
+                <fieldset>
+                    <label for="product-brand">Marca:</label>
+                    <select name="productBrand" id="product-brand" required>
                         <option value="" selected disabled>Elegí una</option>
-                        <option>
-                            <%= category.name %>
-                        </option>
-                    <% }) %>
-                </select>
-            </fieldset>
-    
-            <fieldset>
-                <label for="product-colors">Colores:</label>
-                <select name="productColors" id="product-colors" required multiple>
-                    <% colors.forEach(color => { %>
-                        <option value="<%= color.id %>">
-                            <%= color.name %>
-                        </option>
-                    <% }) %>
-                </select>
-            </fieldset>
-    
-            <fieldset>
-                <label id="product-price" for="product-price">Precio:</label>
-                <input class="product-input" type="text" name="productPrice" id="product-price" required placeholder ="$$$">
-            </fieldset>
-    
-            <fieldset>
-                <button id="sendButton" type="submit">Crear producto</button>
-            </fieldset>
-    
-            <fieldset>
-                <button id="eraseButton" type="reset">Borrar todo</button>
-            </fieldset>
-    
-        </form>
+                        <% brands.forEach(brand => { %>
+                            <option value="<%= brand.id %>">
+                                <%= brand.name %>
+                            </option>
+                        <% }) %>
+                    </select>
+                </fieldset>
+        
+                <fieldset>
+                    <label for="product-descript"></label>
+                    <input class="product-input" type="textarea" name="productDescript" id="product-descript" required placeholder="Descripción">
+                </fieldset>
+        
+                <fieldset>
+                    <label for="product-images">Imagen de Producto:</label>
+                    <input type="file" name="productImages" id="product-images" required multiple>
+                </fieldset>
+        
+                <fieldset>
+                    <label for="product-cat">Categoría:</label>
+                    <select name="productCat" id="product-cat" required>
+                        <% category.forEach(category => { %>
+                             
+                            <option> 
+                                <%= category.name %>
+                            </option>
+                        <% }) %>
+                    </select>
+                </fieldset>
+        
+                <fieldset>
+                    <label for="product-colors">Colores:</label>
+                    <select name="productColors" id="product-colors" required multiple>
+                        <% colors.forEach(color => { %>
+                            <option value="<%= color.id %>">
+                                <%= color.name %>
+                            </option>
+                        <% }) %>
+                    </select>
+                </fieldset>
+        
+                <fieldset>
+                    <label id="product-price" for="product-price">Precio:</label>
+                    <input class="product-input" type="text" name="productPrice" id="product-price" required placeholder ="$$$">
+                </fieldset>
+        
+                <fieldset>
+                    <button id="sendButton" type="submit">Crear producto</button>
+                </fieldset>
+        
+                <fieldset>
+                    <button id="eraseButton" type="reset">Borrar todo</button>
+                </fieldset>
+            </form>
+            
         </section> 
     <%- include("../partials/footer")%>
 </body>

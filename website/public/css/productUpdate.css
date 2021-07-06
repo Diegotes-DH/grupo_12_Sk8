@@ -9,12 +9,12 @@ body {
 }
 
 section{
-    max-width: 90%;
+    max-width: 90%; 
     margin:auto;
 
 } 
 
-.form-product{
+#form-product{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
