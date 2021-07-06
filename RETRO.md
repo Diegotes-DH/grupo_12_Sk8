@@ -1,3 +1,16 @@
+# SPRINT 4
+
+## Qué hicimos bien
+Mantuvimos el retrotiming como hicimos en el sprint anterior, lo que nos ayudó delegar las tareas para no depender de esperar a estar los dos disponibles.
+
+## Qué hicimos mal
+Hicimos calls semanales, para mantenernos más alineados y actualizados empesaremos a tener contacto diario aunque sea breve.
+
+## Qué debemos empezar a hacer
+Utilizar más funcionalidades de ejs y mejorar el partial del header con datos dinámicos.
+
+
+
 # SPRINT 3
 
 ## Qué hicimos bien
