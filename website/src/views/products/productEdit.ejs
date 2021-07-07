@@ -48,11 +48,9 @@
                     <label for="product-cat">Categoría:</label>
                     <select name="productCat" id="product-cat" required>
                         <% category.forEach(category => { %>
-                            <% if (product.category.id == category.id) { %>
-                                <option value="<%= category.id %>" selected><%= category.name %></option>
-                            <% } else { %>
-                                <option value="<%= category.id %>"><%= category.name %></option>
-                            <% } %>
+                            <option> 
+                                <%= category.name %>
+                            </option>
                         <% }) %>
                     </select>
                 </fieldset>
