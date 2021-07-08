@@ -13,5 +13,20 @@
       2
     ],
     "price": "$3000"
+  },
+  {
+    "id": 2,
+    "name": "Tabla guatambú",
+    "descript": "tabla de guanambu",
+    "brand": 2,
+    "image": [
+      "productImages-1625768289675.png"
+    ],
+    "category": null,
+    "colors": [
+      1,
+      3
+    ],
+    "price": "$5000"
   }
 ]

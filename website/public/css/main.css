@@ -100,13 +100,11 @@ h1{
         width: 100%;
         font-size: 40px;
     }
-
     section{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
-
     .product{
         width: 40%;
         margin: 10px;

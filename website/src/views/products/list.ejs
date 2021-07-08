@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listado de Productos Sk8</title>
+
+    <link href="/css/productList.css" rel="stylesheet">
     <link href="/css/header.css" rel="stylesheet">
     <link href="/css/footer.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -14,25 +16,26 @@
 <body>
     <%- include("../partials/header")%>
 
-    <section id="">
+    
+
+    <section id="main-content">
         <% list.forEach(product => { %>
-            <article>
+            <article class="product">
                 <% if (product.image) { %>
-                    <figure><img src="/uploads/products/<%= product.image[0]%>" alt=""></figure>
+                    <img class="product-image" src="/uploads/products/<%= product.image[0]%>" alt="">
                 <% } else { %>
-                    <figure><img src="/images/sk8-logo.png" alt=""></figure>
+                    <img class="product-image" src="/images/sk8-logo.png" alt="">
                 <% } %>
-                <section>
-                    <h2><%= product.name %></h2>
-                    <h4><%= product.descript %></h4>
+                
+                    <h2 class="product-name"><%= product.name %></h2>
+                    <h4 class="description"><%= product.descript %></h4>
+                    <p class="price"><%= product.price %></p>
                     <a href="/producto/<%= product.id %>">Ver producto</a>
-                </section>
+                
             </article>
         <% }) %>
-
-    </section>
-
-
+    
+    </section> 
 
 
     <%- include("../partials/footer")%>
