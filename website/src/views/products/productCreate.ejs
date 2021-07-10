@@ -52,7 +52,7 @@
                     <select name="productCat" id="product-cat" required>
                         <% category.forEach(category => { %>
                              
-                            <option> 
+                            <option value="<%= category.id %>"> 
                                 <%= category.name %>
                             </option>
                         <% }) %>

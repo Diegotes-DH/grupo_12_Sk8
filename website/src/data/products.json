@@ -1,13 +1,13 @@
 [
   {
     "id": 1,
-    "name": "Rueda ",
+    "name": "Rueda  ",
     "descript": "Rueda 53 mm",
     "brand": 2,
     "image": [
-      "productImages-1625246373466.png"
+      "productImages-1625942157634.png"
     ],
-    "category": 1,
+    "category": 4,
     "colors": [
       1,
       2
@@ -28,5 +28,35 @@
       3
     ],
     "price": "$5000"
+  },
+  {
+    "id": 3,
+    "name": "Skate armado",
+    "descript": "Tabla concava ",
+    "brand": null,
+    "image": [
+      "productImages-1625942584875.png"
+    ],
+    "category": null,
+    "colors": [
+      null,
+      null
+    ],
+    "price": "$7000"
+  },
+  {
+    "id": 4,
+    "name": "Truck ",
+    "descript": "Cromado x 2",
+    "brand": 4,
+    "image": [
+      "productImages-1625943351223.png"
+    ],
+    "category": 3,
+    "colors": [
+      2,
+      3
+    ],
+    "price": "$2000"
   }
 ]
