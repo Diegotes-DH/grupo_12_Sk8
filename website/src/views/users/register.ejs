@@ -16,7 +16,7 @@
     <%- include("../partials/header")%>
 
     <section>
-        <form class="createForm" action="/register" method="post" enctype="multipart/form">
+        <form class="createForm" action="/usuario/registro" method="post" enctype="multipart/form-data">
             <h3>Creá tu cuenta en un toque</h3>
             <fieldset>
                 <label for="name"></label>
@@ -26,7 +26,7 @@
 
             <fieldset>
                 <label for="user"></label>
-                <input class="type" type="text" name="user" id="user" required placeholder="Nombre de usuario">
+                <input class="type" type="text" name="newUser" id="newUser"  required placeholder="Nombre de usuario">
                 <span class="feedback"></span>
             </fieldset>
 

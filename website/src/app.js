@@ -2,6 +2,9 @@
 const express = require("express");
 const path = require("path");
 const method = require("method-override");
+const session = require("express-session");
+const cookie = require("cookie-parser");
+const bcrypt = require("bcryptjs");
 const app = express();
 
 /* Servidor */
@@ -18,14 +21,13 @@ app.set("views", path.resolve(__dirname, "./views"));
 // /* Data Configuration */
 app.use(express.urlencoded({extended:false})) // Not fund req.body
 app.use(method("_method")) // ?_method=PUT
+app.use(cookie())
+app.use(session({saveUnitialized: false, secret:"mensaje secreto"}))
 
 /* Rutas */
-
 const main = require("./routes/mainRouter")
 app.use(main);
-
 const products = require("./routes/productRouter");
 app.use("/producto", products);
-
 const users = require("./routes/usersRouter");
 app.use("/usuario", users);
