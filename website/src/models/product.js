@@ -14,7 +14,7 @@ const model = {
         let productos = this.all();
         productos.map(element => {
             element.brand = brandModel.one(element.brand)
-            return element
+            return element 
         }).map(element => {
             element.colors = element.colors.map(color => {
                 color = colorModel.one(color)

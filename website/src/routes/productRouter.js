@@ -13,7 +13,7 @@ let dest = multer.diskStorage({
         cb(null, file.fieldname + '-' + Date.now()+ path.extname(file.originalname))
     }
 })
-const upload = multer({storage:dest});
+const upload = multer({storage:dest}); 
 
 /*product list*/
 router.get("/", productController.index)
@@ -27,14 +27,7 @@ router.get("/:id", productsController.detail);
 router.post("/",upload.any(), productController.save)            
 /*edit product send*/
 router.put("/:id", upload.any(), productController.update)
-//PUT, accion de edicion
 /*delete product*/
 router.delete("/:id", productController.delete)
-// //accion de borrado, DELETE. "/:id"
-
-
-
-
-
 
 module.exports = router;

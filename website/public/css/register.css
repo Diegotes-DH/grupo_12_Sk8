@@ -44,7 +44,7 @@ fieldset{
     margin-top: 20px;
 }
 
-.user_image{
+#user_image{
     margin-top: 20px;
 }
 
@@ -60,6 +60,10 @@ fieldset{
     padding: 5px;
     font-family: "Poppins";
     background-color:#ebe9eb;
+}
+
+.text-error{
+    color:#fe4a49
 }
 
 .sendButton{

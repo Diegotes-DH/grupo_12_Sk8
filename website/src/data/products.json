@@ -22,7 +22,7 @@
     "image": [
       "productImages-1625768289675.png"
     ],
-    "category": null,
+    "category": 2,
     "colors": [
       1,
       3
@@ -33,14 +33,14 @@
     "id": 3,
     "name": "Skate armado",
     "descript": "Tabla concava ",
-    "brand": null,
+    "brand": 3,
     "image": [
       "productImages-1625942584875.png"
     ],
-    "category": null,
+    "category": 1,
     "colors": [
-      null,
-      null
+      2,
+      3
     ],
     "price": "$7000"
   },

@@ -20,41 +20,57 @@
             <h3>Creá tu cuenta en un toque</h3>
             <fieldset>
                 <label for="name"></label>
-                <input class="type" type="text" name="nombreCompleto" id="name" required placeholder="Nombre y apellido">
-                <span class="feedback"></span>
+                <input class="type" type="text" name="name" id="name" placeholder="Nombre" value="<%= locals.oldData ? oldData.name : null %>">
             </fieldset>
+            <div class="text-error">
+                <% if (locals.errors && errors.name) { %>
+                    <%= errors.name.msg %> 
+                <% } %> 
+            </div>
 
             <fieldset>
-                <label for="user"></label>
-                <input class="type" type="text" name="newUser" id="newUser"  required placeholder="Nombre de usuario">
+                <label for="surname"></label>
+                <input class="type" type="text" name="lastname" id="lastname" placeholder="Apellido" value="<%= locals.oldData ? oldData.lastname : null %>">
                 <span class="feedback"></span>
             </fieldset>
+            <div class="text-error">
+                <% if (locals.errors && errors.lastname) { %>
+                    <%= errors.lastname.msg %> 
+                <% } %> 
+            </div>
 
-            <fieldset class="birthdate">
-                <legend>Fecha de nacimiento</legend>
-                <input class="type"type="date" name="fecha" min="1950-01-01" max="2003-12-31" required>
-                <label for="fecha"></label>
-            </fieldset>
-                
             <fieldset>
-                <label for="domicilio"></label>
-                <input class="type" type="text" name="domicilio" id="domicilio" required placeholder="Domicilio">
+                <label for="email"></label>
+                <input class="type" type="text" name="email" id="email" placeholder="e-mail" value="<%= locals.oldData ? oldData.email : null %>">
                 <span class="feedback"></span>
             </fieldset>
+            <div class="text-error">
+                <% if (locals.errors && errors.email) { %>
+                    <%= errors.email.msg %> 
+                <% } %> 
+            </div>
 
-            <fieldset class="user_image">
+            <fieldset>
+                <label for="password"></label>
+                <input class="type" type="password" name="password" id="password" placeholder="Contraseña">
+                <span class="feedback"></span>
+            </fieldset>
+            <div class="text-error">
+                <% if (locals.errors && errors.password) { %>
+                    <%= errors.password.msg %> 
+                <% } %> 
+            </div>
+
+            <fieldset id="user_image">
                 <legend>Imagen de perfil</legend>
-                <input type="file" name="fotoUsuario" accept=".jpg, .png">
-                <label for="fotoUsuario"></label>
+                <input class="type" type="file" name="avatar" accept=".jpg, .png">
             </fieldset>
+            <% if (locals.errors && errors.avatar) { %> 
+                <div class="text-error">
+                    <%= errors.avatar.msg %> 
+                </div>
+            <% } %> 
 
-            <fieldset class="newsletter">
-                <legend>¿Deseás recibir el newsletter?</legend>
-                <input type="radio" name="news" id="positive" required value="positive">
-                <label class= radio_option for="positive">Sí, dale</label>
-                <input type="radio" name="news" id="negative" required value="negative">
-                <label class= radio_option for="negative">No, gracias</label>
-            </fieldset>
                 
             <fieldset>
                 <button class="sendButton" type="submit">Confirmar</button>

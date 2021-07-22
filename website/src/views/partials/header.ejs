@@ -12,9 +12,18 @@
                 </p>
             </form>
 
-            <a href="/usuario/ingresa" id="user">
-                <i class="fas fa-user  fa-2x"></i>
-            </a>
+            <%if(locals.isLogged) {%>
+                <a href="/usuario/perfil" id="user">
+                    <img src="/uploads/avatars/<%=locals.userLogged.image %>" width="40" style="border-radius: 100%; border: 1px solid rgb(255, 255, 255)">
+                    <%= locals.userLogged.name %>
+                </a>
+
+                
+            <% } else { %>  
+                <a href="/usuario/ingresa" id="user">
+                    <i class="fas fa-user  fa-2x"></i>
+                </a>
+            <% } %>
 
             <a href="/carrito" id="shopping-cart">
                 <i class="fas fa-shopping-cart  fa-2x"></i>
@@ -24,15 +33,15 @@
 
         <nav id="main-navbar">
             <ul>
-                <li><a href="#">Mi primer Skate</a></li>
-                <li><a href="#">Skates</a></li>
-                <li><a href="#">Tablas</a></li>
-                <li><a href="#">Trucks</a></li>
-                <li><a href="#">Ruedas</a></li>
-                <li><a href="#">Rulemanes</a></li>
-                <li><a href="#">Lijas</a></li>
-                <li><a href="#">Accesorios</a></li>
-                <li><a href="#">Protecciones</a></li>
+                <li><a href="/producto/">Mi primer Skate</a></li>
+                <li><a href="/producto/">Skates</a></li>
+                <li><a href="/producto/">Tablas</a></li>
+                <li><a href="/producto/">Trucks</a></li>
+                <li><a href="/producto/">Ruedas</a></li>
+                <li><a href="/producto/">Rulemanes</a></li>
+                <li><a href="/producto/">Lijas</a></li>
+                <li><a href="/producto/">Accesorios</a></li>
+                <li><a href="/producto/">Protecciones</a></li>
             </ul>
         </nav>
     </header>

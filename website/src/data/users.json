@@ -1,20 +1,34 @@
 [
-    {
-        "id": 1,
-        "name": "Fran",
-        "lastname": "Astarloa",
-        "email": "astarloafrancisco@gmail.com",
-        "password": "12341234",
-        "category": "user",
-        "image": "user-defecto.png"
-    },
-    {
-        "id": 2,
-        "name": "Diego",
-        "lastname": "Testa",
-        "email": "testadiegom@gmail.com",
-        "password": "qwerty",
-        "category": "admin",
-        "image": "user-defecto.png"
-    }
+ {
+  "id": 1,
+  "name": "Fran",
+  "lastname": "Astarloa",
+  "email": "astarloafrancisco@gmail.com",
+  "password": "12341234",
+  "category": "user",
+  "image": "user-defecto.png"
+ },
+ {
+  "id": 2,
+  "name": "Diego",
+  "lastname": "Testa",
+  "email": "testadiegom@gmail.com",
+  "password": "$2a$10$GekMMMHv1JOcwUaNfVFjtuQPzkQlPIvqoqXdfi4tfyaqEo9miJsr6"
+ },
+ {
+  "id": 3,
+  "name": "Juan",
+  "lastname": "Perez",
+  "email": "juanito@gmail.com",
+  "password": "$2a$10$L6jlINs38E1xyYw7u.8mbOf8uY9qx39JACKCtNdpRQRbREeDzgQeW",
+  "image": "avatar-1626571720136.png"
+ },
+ {
+  "id": 4,
+  "name": "Cosme",
+  "lastname": "Fulanito",
+  "email": "cosme@gmail.com",
+  "password": "$2a$10$NwMsY153BM6tfMjRfVvkku2rTmjBgudEdrBIf57DdLzkdy8iJy/Ga",
+  "image": "avatar-1626572926360.jpeg"
+ }
 ]

@@ -38,7 +38,9 @@ fieldset{
     width: 100%;
     padding: 10px 5px;
 }
-
+.text-error{
+    color:#fe4a49
+}
 .type{
     width: 100%;
     border: none;

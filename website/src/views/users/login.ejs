@@ -19,19 +19,31 @@
     
     <section>
 
-        <form class="userForm" action="/registro" method="post">
+        <form class="userForm" action="/usuario/ingresa" method="post">
             <h3>Iniciá sesión</h3>
 
             <fieldset>
-                <label for="userName"></label>
-                <input class="type" type="text" name="userName" id="userName" placeholder="Nombre de usuari@" required>
-                <span class="feedback"></span>
-            </fieldset>
+                <label for="email"></label>
+                <input class="type" type="text" name="email" id="email" placeholder="e-mail">
+            </fieldset> 
+            <div class="text-error">
+                <% if (locals.errors && errors.email) { %>
+                    <%= errors.email.msg %> 
+                <% } %> 
+            </div>
     
             <fieldset>
                 <label for="password"></label>
-                <input class="type" type="text" name="password" id="password" placeholder="Contraseña" required>
-                <span class="feedback"></span>
+                <input class="type" type="password" name="password" id="password" placeholder="Contraseña">
+            </fieldset>
+            <div class="text-error">
+                <% if (locals.errors && errors.password) { %>
+                    <%= errors.password.msg %> 
+                <% } %> 
+            </div>
+
+            <fieldset>
+                <input type="checkbox" id="remember_me" name="remember_me" style="margin:5px"> Recordar mi cuenta
             </fieldset>
     
             <fieldset>

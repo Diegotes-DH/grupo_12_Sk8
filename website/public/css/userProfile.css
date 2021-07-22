@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Poppins, arial, helvetica;
+}
+
+
+/*-----------------------Section--------------------------------*/
+
+section{
+    height:70vh;
+    max-width: 90%;
+    margin:auto;
+
+}
+
+#avatar-image{
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    border-radius: 50%;
+    border: 1px solid rgb(97, 95, 95);
+}

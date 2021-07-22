@@ -1,31 +1,31 @@
 const express = require('express');
 const router = express.Router();
+
+// controller
 const usersController = require("../controllers/usersController");
-const multer = require("multer");
-const path = require('path');
-const dest = multer.diskStorage({
-    destination: function (req, file, cb) {
-        let extension = path.extname(file.originalname);
-            cb(null, path.resolve(__dirname,"../../public/uploads","avatars"))
-    },
-    filename: function (req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now()+ path.extname(file.originalname))
-    }
-})
-const upload = multer({storage: dest})
 
-/*login*/
-router.get("/ingresa",usersController.login); 
+//middlewares
+const validations = require("../middlewares/validationsMiddleware");
+const upload = require('../middlewares/multerMiddleware');
+const guestMiddleware = require("../middlewares/guestMiddleware");
+const noGuestMiddleware = require("../middlewares/noGuestMiddleware");
 
-/*register*/
-router.get("/registro", usersController.register);
+//ver formulario de registro
+router.get("/registro", guestMiddleware, usersController.register);
 
-/*multer >> para subir archivos o imagenes*/
-router.post("/registro", upload.single("fotoUsuario"), usersController.save);
+//ver formulario de login
+router.get("/ingresa", guestMiddleware ,usersController.login); 
 
-/*procesar el registro >> router.post*/
+//ver perfil de usuario 
+router.get("/perfil", noGuestMiddleware, usersController.profile)
 
-/*perfil de usuario >> router.get*/
+//cerrar la sesión
+router.get("/salir", usersController.logout)
 
+//procesar el formulario de registro 
+router.post("/registro", upload.single("avatar"),validations, usersController.save);
+ 
+//procesar el formulario de loggin  
+router.post("/ingresa", usersController.loginProcess); 
 
 module.exports = router;
