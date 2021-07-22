@@ -8,5 +8,5 @@ router.get("/", mainController.home);
 /*cart*/
 router.get("/carrito", mainController.cart);
 
-
+router.get("/error", mainController.error);
 module.exports = router;

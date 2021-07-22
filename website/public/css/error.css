@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Poppins, arial, helvetica;
+}
+
+
+
+#errorImage{
+    width: 35%;
+    margin-left: 10%;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+#errorSection{
+    margin-top: 25%;
+
+}
