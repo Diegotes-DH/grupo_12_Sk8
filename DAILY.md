@@ -1,3 +1,19 @@
+# Sprint 5
+
+Semana 1 - 8/7 al 15/7
+Hicimos una breve call para revisar las consignas, hacer un retrotiming y dividir tareas.
+Actualizamos el tablero de trello e instalamos los paquetes multer, sessions y cookie-parser.
+
+Semana 1 - 15/7 al 22/7
+Generamos las validaciones de los formularios con express valdidator.
+Seteamos los middlewares de aplicación como el error 404 y cookies.
+Armamos el proceso de login completo y rutas de usuarios y huéspedes. 
+
+Semana 1 - 22/7 al 29/7
+Revisamos el código, probamos el funcionamiento de la web y armamos vista de la página de error 404.
+Actualizamos el tablero de Trello.
+
+
 # Sprint 4
 
 Semana 1 - 17/6 al 24/6

@@ -1,9 +1,21 @@
+# SPRINT 5
+
+## Qué hicimos bien
+Seguimos fijando un retrotiming como en sprints anteriores y delegamos tareas en base a los timepos de cada uno.
+
+## Qué debemos seguir haciendo
+Mantener calls semanales, para estar más alineados y actualizados con el trabajo y situación de cada uno.
+
+## Qué debemos empezar a hacer
+Nos acercamos al tramo final del proyecto, no perder de vista el objetivo y seguir trabajando como lo venimos haciendo. 
+
+
 # SPRINT 4
 
 ## Qué hicimos bien
 Mantuvimos el retrotiming como hicimos en el sprint anterior, lo que nos ayudó delegar las tareas para no depender de esperar a estar los dos disponibles.
 
-## Qué hicimos mal
+## Qué debemos seguir haciendo
 Hicimos calls semanales, para mantenernos más alineados y actualizados empesaremos a tener contacto diario aunque sea breve.
 
 ## Qué debemos empezar a hacer
