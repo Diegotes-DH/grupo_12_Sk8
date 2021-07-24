@@ -9,13 +9,6 @@
   "image": "user-defecto.png"
  },
  {
-  "id": 2,
-  "name": "Diego",
-  "lastname": "Testa",
-  "email": "testadiegom@gmail.com",
-  "password": "$2a$10$GekMMMHv1JOcwUaNfVFjtuQPzkQlPIvqoqXdfi4tfyaqEo9miJsr6"
- },
- {
   "id": 3,
   "name": "Juan",
   "lastname": "Perez",
@@ -30,5 +23,13 @@
   "email": "cosme@gmail.com",
   "password": "$2a$10$NwMsY153BM6tfMjRfVvkku2rTmjBgudEdrBIf57DdLzkdy8iJy/Ga",
   "image": "avatar-1626572926360.jpeg"
+ },
+ {
+  "id": 5,
+  "name": "Diego",
+  "lastname": "Testa",
+  "email": "diego@gmail.com",
+  "password": "$2a$10$pqZPZgVA9zJGfP7WznwWTeUrVH3j1zcv9cIePql6S2bb.kjol7aUi",
+  "image": "avatar-1627142074968.png"
  }
 ]

@@ -49,9 +49,9 @@ const usersController = {
                 //creo la propiedad userLogged y le asigno el valor de userToLogin
                 req.session.userLogged = userToLogin;
 
-                /*if(req.body.remember_me){
-                    res.cookie("userEmail", req.body.email, {maxAge: (1000*60)*2}) // con esto seteo la cookie
-                }*/
+                if(req.body.remember_me){
+                    res.cookie("userEmail", req.body.email, {maxAge: (1000*60)*2})
+                }// con esto seteo la cookie
 
                 return res.redirect('/usuario/perfil');
             }
@@ -81,11 +81,12 @@ const usersController = {
         });
     },  
     logout: (req, res)=>{
+        res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect('/');
     }
     
 }
 
-module.exports = usersController;  
+module.exports = usersController;   
 
