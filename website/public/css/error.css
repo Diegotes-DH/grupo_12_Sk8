@@ -9,17 +9,62 @@ body {
 }
 
 
+/*-----------------------Section--------------------------------*/
 
-#errorImage{
-    width: 35%;
-    margin-left: 10%;
-}
+
 main{
     display: flex;
     flex-wrap: wrap;
+    justify-content:center;
     
 }
-#errorSection{
-    margin-top: 25%;
+
+#errorImage{  
+    width: 45%;
+    
+}
+#title{
+    color:#fe4a49;
+    font-size: 80px;
+    text-align: center;
+}
+#description{
+    color:#000000;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 10px 0;
+}
+
+#bottom{
+    font-size:17px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*-----------------------Tablet--------------------------------*/
+
+@media (min-width:600px){
+    #errorImage{  
+        width: 15%;
+        
+    }
+    #errorSection{
+        margin-top:30px;
+    }
+    #title{
+        color:#fe4a49;
+        font-size: 80px;
+    }
+    #description{
+        color:#000000;
+        font-size: 20px;
+        text-align: left;
+    }
 
 }

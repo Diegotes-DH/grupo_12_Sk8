@@ -21,13 +21,5 @@
   "email": "cosme@gmail.com",
   "password": "$2a$10$NwMsY153BM6tfMjRfVvkku2rTmjBgudEdrBIf57DdLzkdy8iJy/Ga",
   "image": "avatar-1626572926360.jpeg"
- },
- {
-  "id": 5,
-  "name": "Francisco Maria",
-  "lastname": "Astarloa",
-  "email": "astarloafrancisco@gmail.com",
-  "password": "$2a$10$dd2ljpUIpcA5BfZH4p2uMegPrA.DVjNzhBP59cWkhjn6d.tbse9Eq",
-  "image": "avatar-1627243100069.png"
  }
 ]
