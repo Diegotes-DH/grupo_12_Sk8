@@ -23,7 +23,7 @@ router.get("/perfil", noGuestMiddleware, usersController.profile)
 router.get("/salir", usersController.logout)
 
 //procesar el formulario de registro 
-router.post("/registro", upload.single("avatar"),validations, usersController.save);
+router.post("/registro", [upload.single("avatar"),validations], usersController.save);
  
 //procesar el formulario de loggin  
 router.post("/ingresa", usersController.loginProcess); 
