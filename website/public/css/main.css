@@ -114,7 +114,7 @@ h1{
 
 /*-----------------------Desktop--------------------------------*/
 
-@media (min-width:1000px){
+@media (min-width:900px){
 
     .product{
         width: 20%;

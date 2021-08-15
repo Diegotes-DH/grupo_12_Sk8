@@ -36,7 +36,7 @@ const usersController = {
 
         let userCreated = user.create(userToCreate);
 
-        return res.redirect ("ingresa"); 
+        return res.redirect("/usuario/ingresa"); 
     },  
     login: (req,res)=> res.render("users/login"),
     loginProcess: (req,res)=>{
