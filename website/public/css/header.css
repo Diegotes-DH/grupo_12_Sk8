@@ -30,6 +30,10 @@
 #search{
     align-self: center;
     display: none;
+} 
+
+#search_input{
+    padding:5px; 
 }
 
 #user{
@@ -106,6 +110,7 @@
         background-color:white;
         color: grey;
         text-align: center;
+        padding: 5px
 
     }
 

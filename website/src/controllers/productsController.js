@@ -8,7 +8,7 @@ const productController = {
     creation: (req,res)=> res.render("products/productCreate", {product:product.one(req.params.id),colors: color.all(), brands:brand.all(), category:category.all()}),
     edition: (req,res)=> res.render("products/productEdit", {product:product.one(req.params.id),colors: color.all(), brands:brand.all(), category:category.all()}),
     save: (req,res)=> {
-        // return res.send(req.files) 
+        // return res.send(req.files)  
         let result = product.new(req.body, req.files);
         if(result == true){
             res.redirect("/producto")

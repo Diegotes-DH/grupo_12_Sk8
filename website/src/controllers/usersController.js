@@ -42,7 +42,7 @@ const usersController = {
     loginProcess: (req,res)=>{
         let userToLogin = user.findByField('email', req.body.email);
 
-        if(userToLogin){
+        if(userToLogin){ 
             let validPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if(validPassword){
                 delete userToLogin.password;
@@ -58,7 +58,7 @@ const usersController = {
             else{res.render("users/login",{
                 errors: {
                     password:{
-                        msg:'contraseña incorrecta'
+                        msg:'credenciales inválidas'
                     }
                 }
              })

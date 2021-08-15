@@ -31,5 +31,13 @@
   "email": "diego@gmail.com",
   "password": "$2a$10$pqZPZgVA9zJGfP7WznwWTeUrVH3j1zcv9cIePql6S2bb.kjol7aUi",
   "image": "avatar-1627142074968.png"
+ },
+ {
+  "id": 6,
+  "name": "Pepe",
+  "lastname": "Grillo",
+  "email": "pepe@gmail.com",
+  "password": "$2a$10$EOBBnMwvoIbqI25QRLSxpuvJFIQC1fdzDpv39UcwdPRJOZXF.xHDS",
+  "image": "avatar-1627312192110.png"
  }
 ]
