@@ -2,26 +2,26 @@
 CREATE DATABASE `dbSk8` /*!40100 DEFAULT CHARACTER SET utf8 */
 
 /* Creamos las tablas en beekeeper y las obtuvimos con el script SHOW CREATE TABLE*/
-CREATE TABLE `brand` ( 
+CREATE TABLE `brands` ( 
     ↩   `id` int(11) NOT NULL AUTO_INCREMENT, 
     ↩   `name` varchar(100) NOT NULL, 
     ↩   PRIMARY KEY (`id`)
 ↩ ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8
 
-CREATE TABLE `category` ( 
+CREATE TABLE `categories` ( 
     ↩   `id` int(11) NOT NULL AUTO_INCREMENT, 
     ↩   `name` varchar(100) NOT NULL, 
     ↩   PRIMARY KEY (`id`)
  ↩ ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8
 
-CREATE TABLE `color` ( 
+CREATE TABLE `colors` ( 
     ↩   `id` int(11) NOT NULL AUTO_INCREMENT, 
     ↩   `name` varchar(100) NOT NULL, 
     ↩   `value` varchar(100) NOT NULL, 
     ↩   PRIMARY KEY (`id`)
     ↩ ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8
 
-CREATE TABLE `colorProduct` ( 
+CREATE TABLE `colorProducts` ( 
     ↩   `id` int(11) NOT NULL AUTO_INCREMENT, 
     ↩   `idColor` int(11) NOT NULL, 
     ↩   `idColor2` int(11) DEFAULT NULL, 
@@ -35,7 +35,7 @@ CREATE TABLE `colorProduct` (
     ↩   CONSTRAINT `colorproduct_ibfk_3` FOREIGN KEY (`idProduct`) REFERENCES `product` (`id`) 
     ↩ ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 
-CREATE TABLE `product` ( 
+CREATE TABLE `products` ( 
     ↩   `id` int(11) NOT NULL AUTO_INCREMENT, 
     ↩   `name` varchar(100) NOT NULL, 
     ↩   `descript` varchar(200) NOT NULL, 
@@ -50,7 +50,7 @@ CREATE TABLE `product` (
     ↩   CONSTRAINT `product_ibfk_2` FOREIGN KEY (`idBrand`) REFERENCES `brand` (`id`) 
     ↩ ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 
-CREATE TABLE `user` ( 
+CREATE TABLE `users` ( 
     ↩   `id` int(11) NOT NULL AUTO_INCREMENT, 
     ↩   `name` varchar(50) NOT NULL, 
     ↩   `lastname` varchar(50) NOT NULL, 
