@@ -1,5 +1,7 @@
+/* Creamos la base en beekeeper y las obtuvimos con el script SHOW CREATE DATABASE */
 CREATE DATABASE `dbSk8` /*!40100 DEFAULT CHARACTER SET utf8 */
 
+/* Creamos las tablas en beekeeper y las obtuvimos con el script SHOW CREATE TABLE*/
 CREATE TABLE `brand` ( 
     ↩   `id` int(11) NOT NULL AUTO_INCREMENT, 
     ↩   `name` varchar(100) NOT NULL, 
@@ -22,12 +24,15 @@ CREATE TABLE `color` (
 CREATE TABLE `colorProduct` ( 
     ↩   `id` int(11) NOT NULL AUTO_INCREMENT, 
     ↩   `idColor` int(11) NOT NULL, 
+    ↩   `idColor2` int(11) DEFAULT NULL, 
     ↩   `idProduct` int(11) NOT NULL, 
     ↩   PRIMARY KEY (`id`), 
     ↩   KEY `idColor` (`idColor`), 
+    ↩   KEY `idColor2` (`idColor2`), 
     ↩   KEY `idProduct` (`idProduct`), 
     ↩   CONSTRAINT `colorproduct_ibfk_1` FOREIGN KEY (`idColor`) REFERENCES `color` (`id`), 
-    ↩   CONSTRAINT `colorproduct_ibfk_2` FOREIGN KEY (`idProduct`) REFERENCES `product` (`id`) 
+    ↩   CONSTRAINT `colorproduct_ibfk_2` FOREIGN KEY (`idColor2`) REFERENCES `color` (`id`), 
+    ↩   CONSTRAINT `colorproduct_ibfk_3` FOREIGN KEY (`idProduct`) REFERENCES `product` (`id`) 
     ↩ ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 
 CREATE TABLE `product` ( 

@@ -21,7 +21,6 @@
   "email": "cosme@gmail.com",
   "password": "$2a$10$NwMsY153BM6tfMjRfVvkku2rTmjBgudEdrBIf57DdLzkdy8iJy/Ga",
   "image": "avatar-1626572926360.jpeg"
-<<<<<<< HEAD
  },
  {
   "id": 5,
@@ -38,7 +37,5 @@
   "email": "pepe@gmail.com",
   "password": "$2a$10$EOBBnMwvoIbqI25QRLSxpuvJFIQC1fdzDpv39UcwdPRJOZXF.xHDS",
   "image": "avatar-1627312192110.png"
-=======
->>>>>>> 567c0396561cc9692076cef9b5d143936c4f57fb
  }
 ]
