@@ -37,5 +37,13 @@
   "email": "pepe@gmail.com",
   "password": "$2a$10$EOBBnMwvoIbqI25QRLSxpuvJFIQC1fdzDpv39UcwdPRJOZXF.xHDS",
   "image": "avatar-1627312192110.png"
+ },
+ {
+  "id": 7,
+  "name": "Francisco Maria",
+  "lastname": "Astarloa",
+  "email": "astarloafrancisco@gmail.com",
+  "password": "$2a$10$t8jM9D2cQGM.mq6WSo.N3OXRO1LBjOhScn6OcVen6zIBf1h6xKvt2",
+  "image": "avatar-1629137449762.jpg"
  }
 ]

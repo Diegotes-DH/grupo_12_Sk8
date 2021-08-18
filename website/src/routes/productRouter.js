@@ -19,6 +19,8 @@ const upload = multer({storage:dest});
 router.get("/", productController.index)
 /*product creation*/
 router.get("/crear", productsController.creation);
+/*Skates*/
+router.get("/skates", productsController.skates)
 /*product edition*/
 router.get("/:id/editar", productsController.edition);
 /*detail*/
