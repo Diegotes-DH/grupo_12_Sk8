@@ -32,4 +32,4 @@ router.put("/:id", upload.any(), productController.update)
 /*delete product*/
 router.delete("/:id", productController.delete)
 
-module.exports = router;
+module.exports = router; 

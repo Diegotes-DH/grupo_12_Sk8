@@ -23,7 +23,7 @@ const productController = {
         } else {
             res.send("Error al cagar la info")
         }
-    },
+    }, 
     delete: (req,res) => {
         let result = product.delete(req.params.id);
         return result == true ? res.redirect("/producto") : res.send("Error al cargar la informacion") 

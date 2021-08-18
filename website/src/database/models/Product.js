@@ -49,13 +49,12 @@ module.exports = function (sequelize, dataTypes) {
         Product.belongsToMany(models.Color,{
             as: "colors",
             through: "ColorProduct",
-            foreignKey: "idColor",
-            otherKey: "idColor2",
-            otherKey: "idProduct",
+            foreignKey: "idProduct",
+            otherKey: "idColor",
             timeStamp: false
         });
-        
-    };
+         
+    }; 
  
     return Product
 }

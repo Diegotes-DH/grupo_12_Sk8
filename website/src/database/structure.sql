@@ -21,18 +21,14 @@ CREATE TABLE `colors` (
     ↩   PRIMARY KEY (`id`)
     ↩ ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8
 
-CREATE TABLE `colorProducts` ( 
+CREATE TABLE `colorsProducts` ( 
     ↩   `id` int(11) NOT NULL AUTO_INCREMENT, 
     ↩   `idColor` int(11) NOT NULL, 
-    ↩   `idColor2` int(11) DEFAULT NULL, 
     ↩   `idProduct` int(11) NOT NULL, 
-    ↩   PRIMARY KEY (`id`), 
-    ↩   KEY `idColor` (`idColor`), 
-    ↩   KEY `idColor2` (`idColor2`), 
+    ↩   PRIMARY KEY (`id`), ↩   KEY `idColor` (`idColor`), 
     ↩   KEY `idProduct` (`idProduct`), 
-    ↩   CONSTRAINT `colorproduct_ibfk_1` FOREIGN KEY (`idColor`) REFERENCES `color` (`id`), 
-    ↩   CONSTRAINT `colorproduct_ibfk_2` FOREIGN KEY (`idColor2`) REFERENCES `color` (`id`), 
-    ↩   CONSTRAINT `colorproduct_ibfk_3` FOREIGN KEY (`idProduct`) REFERENCES `product` (`id`) 
+    ↩   CONSTRAINT `colorsproducts_ibfk_1` FOREIGN KEY (`idColor`) REFERENCES `colors` (`id`), 
+    ↩   CONSTRAINT `colorsproducts_ibfk_2` FOREIGN KEY (`idProduct`) REFERENCES `products` (`id`) 
     ↩ ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 
 CREATE TABLE `products` ( 

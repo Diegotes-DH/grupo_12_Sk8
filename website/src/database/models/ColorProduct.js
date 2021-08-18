@@ -10,10 +10,7 @@ module.exports = function (sequelize, dataTypes) {
         idColor:{
             type: dataTypes.INTEGER,
         },
-        idColor2:{
-            type: dataTypes.INTEGER,
-        },
-        idProduct:{
+        idProduct:{ 
             type: dataTypes.INTEGER,
         },
     }
