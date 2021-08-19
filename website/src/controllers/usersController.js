@@ -58,7 +58,7 @@ const usersController = {
             where:{email: req.body.email}
         }).then(function(){
             return userToLogin   
-        });
+        })
         if(userToLogin){ 
             let validPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if(validPassword){
@@ -91,6 +91,16 @@ const usersController = {
         }
         
     },
+    profile: (req, res)=>{
+        return res.render("users/profile",{
+            user:req.session.userLogged
+        });
+    },  
+    logout: (req, res)=>{
+        res.clearCookie('userEmail'); //borro la cookie llamada userEmail
+        req.session.destroy();
+        return res.redirect('/');
+    }
     
     /*register: (req,res)=>{
         return res.render("users/register")

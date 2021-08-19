@@ -26,10 +26,10 @@ INSERT INTO product  VALUES (DEFAULT, "Skate Armado", "Tabla concava", 1, 3, "pr
 INSERT INTO product  VALUES (DEFAULT, "Truck", "Cromado x 2", 3, 4, "productImages-1625943351223.png", 2000);
 
 /* Table colorProduct */
-INSERT INTO colorProduct  VALUES (DEFAULT, 3, NULL, 1);
-INSERT INTO colorProduct  VALUES (DEFAULT, 1, 3, 2);
-INSERT INTO colorProduct  VALUES (DEFAULT, 2, NULL, 3);
-INSERT INTO colorProduct  VALUES (DEFAULT, 3, NULL, 4);
+INSERT INTO colorProduct  VALUES (DEFAULT, 3, 1);
+INSERT INTO colorProduct  VALUES (DEFAULT, 1, 2);
+INSERT INTO colorProduct  VALUES (DEFAULT, 2, 3);
+INSERT INTO colorProduct  VALUES (DEFAULT, 3, 4);
 
 
 /* Table user */
