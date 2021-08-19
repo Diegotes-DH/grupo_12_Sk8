@@ -44,13 +44,13 @@
         
                 <fieldset>
                     <label for="product-images">Imagen de Producto:</label>
-                    <input type="file" name="productImages" id="product-images" required multiple>
+                    <input type="file" name="productImages" id="product-images" required>
                 </fieldset>
         
                 <fieldset>
                     <label for="product-cat">Categoría:</label>
                     <select name="productCat" id="product-cat" required>
-                        <% category.forEach(category => { %>
+                        <% categories.forEach(category => { %>
                              
                             <option value="<%= category.id %>"> 
                                 <%= category.name %>

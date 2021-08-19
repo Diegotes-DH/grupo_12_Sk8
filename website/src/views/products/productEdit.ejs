@@ -28,8 +28,8 @@
                 <fieldset>
                         <label for="product-brand">Marca:</label>
                         <select name="productBrand" id="product-brand" required>
-                            <% brands.forEach(brand => { %>
-                                <% if (product.brand.id == brand.id) { %>
+                            <% brands.forEach(brand => { %> 
+                                <% if (product.idBrand == brand.id) { %>
                                     <option value="<%= brand.id %>" selected><%= brand.name %></option>
                                 <% } else { %>
                                     <option value="<%= brand.id %>"><%= brand.name %></option>
@@ -45,14 +45,14 @@
 
                 <fieldset>
                     <label for="product-images">Imagen de Producto:</label>
-                    <input type="file" name="productImages" id="product-images" required multiple>
+                    <input type="file" name="productImages" id="product-images" required>
                 </fieldset>
 
                 <fieldset>
                     <label for="product-cat">Categoría:</label>
                     <select name="productCat" id="product-cat" required>
-                        <% category.forEach(category => { %>
-                            <% if (product.category.id == category.id) { %>
+                        <% categories.forEach(category => { %>
+                            <% if (product.idCategory == category.id) { %>
                                 <option value="<%= category.id %>" selected><%= category.name %></option>
                             <% } else { %>
                                 <option value="<%= category.id %>"><%= category.name %></option>
@@ -64,15 +64,14 @@
                 <fieldset>
                     <label for="product-colors">Colores:</label>
                     <select name="productColors" id="product-colors" required multiple>
-                        <% colors.forEach(colors => { %>
-                            <% if (product.colors.id == colors.id) { %>
-                                <option value="<%= colors.id %>" selected><%= colors.name %></option>
-                            <% } else { %>
-                                <option value="<%= colors.id %>"><%= colors.name %></option>
-                            <% } %>
+                        <% colors.forEach(color => { %>
+                            <option value="<%= color.id %>">
+                                <%= color.name %>
+                            </option>
                         <% }) %>
                     </select>
                 </fieldset>
+                
 
                 <fieldset>
                     <label id="product-price" for="product-price">Precio:</label>

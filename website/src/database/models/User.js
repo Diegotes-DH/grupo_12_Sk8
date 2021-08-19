@@ -9,7 +9,7 @@ module.exports = function (sequelize, dataTypes) {
         },
         name:{
             type: dataTypes.STRING,
-        },
+        }, 
         
         lastname:{
             type: dataTypes.STRING,
@@ -27,7 +27,7 @@ module.exports = function (sequelize, dataTypes) {
 
     let config = {
         tableName:"users",
-        timeStamp: false
+        timestamps: false
     }
 
     let User = sequelize.define(alias, cols, config) 

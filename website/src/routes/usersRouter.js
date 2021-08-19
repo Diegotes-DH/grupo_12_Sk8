@@ -17,12 +17,12 @@ router.get("/registro", guestMiddleware, usersController.register);
 router.get("/ingresa", guestMiddleware ,usersController.login); 
 
 //ver perfil de usuario 
-router.get("/perfil", noGuestMiddleware, usersController.profile)
+//router.get("/perfil", noGuestMiddleware, usersController.profile)
 
 //cerrar la sesión
-router.get("/salir", usersController.logout)
+//router.get("/salir", usersController.logout)
 
-//procesar el formulario de registro 
+//procesar el formulario de registro  
 router.post("/registro", [upload.single("avatar"),validations], usersController.save);
  
 //procesar el formulario de loggin  

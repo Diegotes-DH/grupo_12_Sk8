@@ -19,16 +19,14 @@ const upload = multer({storage:dest});
 router.get("/", productController.index)
 /*product creation*/
 router.get("/crear", productsController.creation);
-/*Skates*/
-router.get("/skates", productsController.skates)
 /*product edition*/
 router.get("/:id/editar", productsController.edition);
 /*detail*/
 router.get("/:id", productsController.detail);
 /*new product send*/
-router.post("/",upload.any(), productController.save)            
+router.post("/",upload.single("productImages"), productController.save)            
 /*edit product send*/
-router.put("/:id", upload.any(), productController.update)
+router.put("/:id", upload.single("productImages"), productController.update)
 /*delete product*/
 router.delete("/:id", productController.delete)
 

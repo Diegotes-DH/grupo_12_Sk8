@@ -19,10 +19,10 @@
     
 
     <section id="main-content">
-        <% list.forEach(product => { %>
+        <% products.forEach(product => { %>
             <article class="product">
                 <% if (product.image) { %>
-                    <img class="product-image" src="/uploads/products/<%= product.image[0]%>" alt="">
+                    <img class="product-image" src="/uploads/products/<%= product.image%>" alt="">
                 <% } else { %>
                     <img class="product-image" src="/images/sk8-logo.png" alt="">
                 <% } %>

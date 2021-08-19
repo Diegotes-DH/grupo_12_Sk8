@@ -15,7 +15,7 @@ module.exports = function (sequelize, dataTypes) {
 
     let config = {
         tableName:"colors",
-        timeStamp: false
+        timestamps: false
     } 
 
     let Color = sequelize.define(alias, cols, config) 
@@ -23,10 +23,10 @@ module.exports = function (sequelize, dataTypes) {
     Color.associate = function (models){
         Color.belongsToMany(models.Product,{
             as: "products",
-            through: "ColorProduct",
+            through: "colorProducts",
             foreignKey: "idColor",
             otherKey: "idProduct",
-            timeStamp: false
+            timestamps: false
         });
     };
 
