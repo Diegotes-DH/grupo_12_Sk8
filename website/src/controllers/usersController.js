@@ -9,7 +9,7 @@ const usersController = {
         return res.render("users/register")
     }, 
 
-    save: function(req, res){
+    save: async function(req, res){
         const resultValidation = validationResult (req);
         if (resultValidation.errors.length > 0) {
             return res.render ("users/register", {
@@ -17,10 +17,8 @@ const usersController = {
                 oldData: req.body,
             });
         }
-        let userInDB = db.User.findOne({
+        let userInDB = await db.User.findOne({
             where: {email: req.body.email}
-        }).then(function(){
-            return userInDB
         });
         if (userInDB) {
             return res.render('users/register', {
@@ -37,27 +35,23 @@ const usersController = {
             password: bcryptjs.hashSync(req.body.password, 10),
             image:req.file.filename
         }
-        let userCreated = db.User.create(userToCreate,{
+        let userCreated = await db.User.create(userToCreate,{
             name: req.body.name,
             lastname: req.body.lastname,
             email: req.body.email,
             password: req.body.password,
             image: req.file.filename, 
         })
-        .then(function (){
-            res.redirect("/usuario/ingresa")
-        }) 
+        res.redirect("/usuario/ingresa")
     },
 
     login: function (req, res) {
         res.render("users/login")
     },
 
-    loginProcess: function(req,res){
-        let userToLogin = db.User.findOne({
+    loginProcess: async function(req,res){
+        let userToLogin = await db.User.findOne({
             where:{email: req.body.email}
-        }).then(function(){
-            return userToLogin   
         })
         if(userToLogin){ 
             let validPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
