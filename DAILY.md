@@ -1,5 +1,18 @@
 # Sprint 5
 
+Semana 1 - 29/7 al 5/8
+Diseñamos la base de datos, la compartimos con Edu y ajustamos las tablas que estaban mal pensadas.
+
+Semana 2 - 5/8 al 13/8
+Trabajamos en la creación de la base y los datos que van dentro de ella.
+Istalamos paquete sequelize.
+
+Semana 3 - 13/8 al 20/8
+Desarrollamos los modelos de las tablas, trabajamos sobre el controlador y ajustamos las vistas.
+
+
+# Sprint 5
+
 Semana 1 - 8/7 al 15/7
 Hicimos una breve call para revisar las consignas, hacer un retrotiming y dividir tareas.
 Actualizamos el tablero de trello e instalamos los paquetes multer, sessions y cookie-parser.
