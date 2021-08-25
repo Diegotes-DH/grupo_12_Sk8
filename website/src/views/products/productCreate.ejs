@@ -51,7 +51,6 @@
                     <label for="product-cat">Categoría:</label>
                     <select name="productCat" id="product-cat" required>
                         <% categories.forEach(category => { %>
-                             
                             <option value="<%= category.id %>"> 
                                 <%= category.name %>
                             </option>
@@ -65,14 +64,14 @@
                         <% colors.forEach(color => { %>
                             <option value="<%= color.id %>">
                                 <%= color.name %>
-                            </option>
+                            </option> 
                         <% }) %>
                     </select>
                 </fieldset>
         
                 <fieldset>
-                    <label id="product-price" for="product-price">Precio:</label>
-                    <input class="product-input" type="text" name="productPrice" id="product-price" required placeholder ="$$$">
+                    <label id="product-price" for="product-price">$</label>
+                    <input class="product-input" type="text" name="productPrice" id="product-price" required placeholder ="Precio">
                 </fieldset>
         
                 <fieldset>

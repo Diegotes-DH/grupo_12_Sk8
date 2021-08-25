@@ -35,20 +35,25 @@ const productController = {
             return res.render("products/productCreate", {colors: colors, brands: brands, categories: categories})
         })
 
- 
+  
     },
-    save: function (req, res) {
-        db.Product.create({
-            name: req.body.productName,
-            descript: req.body.productDescript,
-            idCategory: req.body.productCat,
-            idBrand: req.body.productBrand,
-            image: req.file.filename, 
-            price: req.body.productPrice,
-        })
-        .then(function (){
+    save: async (req, res) => {
+        try{
+            const product = await db.Product.create({
+                name: req.body.productName,
+                descript: req.body.productDescript,
+                idCategory: req.body.productCat,
+                idBrand: req.body.productBrand,
+                image: req.file.filename, 
+                price: req.body.productPrice,
+            }) 
+            
+            const addColors = await product.setColors(Array.from(req.body.productColors))
             res.redirect("/producto")
-        })
+        }catch (error){ 
+            res.send(error)
+         }
+        
         
     },
     edition: function (req, res) {
