@@ -1,3 +1,15 @@
+# SPRINT 6
+
+## Qué hicimos bien
+Seguimos fijando un retrotiming como en sprints anteriores y delegamos tareas en base a los timepos de cada uno.
+
+## Qué debemos seguir haciendo
+Mantenernos al tanto de las tareas que realiza el otro para estar alineados con el trabajo y situación de cada uno.
+
+## Qué debemos empezar a hacer
+Anotar todas las dudas que van surgiendo durante el trabajo para poder consultarla con los profeores en horarios de clase.
+
+
 # SPRINT 5
 
 ## Qué hicimos bien
