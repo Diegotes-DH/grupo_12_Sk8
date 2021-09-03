@@ -66,6 +66,15 @@ fieldset{
     color:#fe4a49
 }
 
+.errores{
+    color:#fe4a49;
+    text-align: center;
+    
+}
+#lista-errores{
+    list-style: none;
+}
+
 .sendButton{
     width: 100%;
     font-size:17px;

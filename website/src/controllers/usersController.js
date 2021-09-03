@@ -15,7 +15,7 @@ const usersController = {
             return res.render ("users/register", {
                 errors: resultValidation.mapped(),
                 oldData: req.body,
-            });
+            }); 
         }
         let userInDB = await db.User.findOne({
             where: {email: req.body.email}

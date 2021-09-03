@@ -83,14 +83,28 @@ const productController = {
             res.redirect("/producto")
         })
     },
-    delete: function (req, res) {
+    delete: async (req, res) => {
+        try{
+            const deleteProduct = await db.Product.findByPk(req.params.id);
+            const deleteColors = await deleteProduct.setColors([]);
+            const removeProduct = await db.Product.destroy({
+                where: {id: req.params.id}
+            });
+            res.redirect("/producto")
+        }catch (error){ 
+            res.send(error)
+                }
+            }
+    
+    
+    /*function (req, res) {
         db.Product.destroy({
             where: {id: req.params.id}
         })
         .then(function (){
             res.redirect("/producto")
         })
-    }
+    }*/
 
 }
 

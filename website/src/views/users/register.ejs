@@ -16,11 +16,14 @@
     <%- include("../partials/header")%>
 
     <section>
+        <div class="errores" > 
+            <ul id="lista-errores"></ul>
+        </div>
         <form class="createForm" action="/usuario/registro" method="post" enctype="multipart/form-data">
             <h3>Creá tu cuenta en un toque</h3>
             <fieldset>
                 <label for="name"></label>
-                <input class="type" type="text" name="name" id="name" placeholder="Nombre" value="<%= locals.oldData ? oldData.name : null %>">
+                <input class="type name" type="text" name="name" id="name" placeholder="Nombre" value="<%= locals.oldData ? oldData.name : null %>">
             </fieldset>
             <div class="text-error">
                 <% if (locals.errors && errors.name) { %>
@@ -30,7 +33,7 @@
 
             <fieldset>
                 <label for="surname"></label>
-                <input class="type" type="text" name="lastname" id="lastname" placeholder="Apellido" value="<%= locals.oldData ? oldData.lastname : null %>">
+                <input class="type lastname" type="text" name="lastname" id="lastname" placeholder="Apellido" value="<%= locals.oldData ? oldData.lastname : null %>">
                 <span class="feedback"></span>
             </fieldset>
             <div class="text-error">
@@ -41,7 +44,7 @@
 
             <fieldset>
                 <label for="email"></label>
-                <input class="type" type="text" name="email" id="email" placeholder="e-mail" value="<%= locals.oldData ? oldData.email : null %>">
+                <input class="type email" type="text" name="email" id="email" placeholder="e-mail" value="<%= locals.oldData ? oldData.email : null %>">
                 <span class="feedback"></span>
             </fieldset>
             <div class="text-error">
@@ -52,7 +55,7 @@
 
             <fieldset>
                 <label for="password"></label>
-                <input class="type" type="password" name="password" id="password" placeholder="Contraseña">
+                <input class="type password" type="password" name="password" id="password" placeholder="Contraseña">
                 <span class="feedback"></span>
             </fieldset>
             <div class="text-error">
@@ -85,6 +88,8 @@
     </section>
 
     <%- include("../partials/footer")%>
+
+    <script src="/validations/user.js"></script>
 
     
 </body>
