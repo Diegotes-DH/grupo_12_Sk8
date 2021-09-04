@@ -1,3 +1,18 @@
+# Sprint 7
+
+Semana 1 - 24/8 al 31/8
+Hicimos una call para realizar una RETRO del spint anterior, actualizar el tablero de trello, revisar el nuevo sprint, delegar tareas y ver tiempos.
+Comenzamos realizando las validaciones de front para el formulario de Usuarios.
+Realizamos ajustes en el código sobre errores que nos quedaron del sprint anterior.
+
+Semana 2 - 31/8 al 07/9
+Seguimos con las validaciones de Back y Front para el fomulario de creación de porducto.
+Surgieron unas dudas que consultamos con los profesores.
+
+Semana 3 - 07/9 al 14/9
+Finalizamos con las validaciones para los formularios de Productos.
+
+
 # Sprint 6
 
 Semana 1 - 29/7 al 5/8
