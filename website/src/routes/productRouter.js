@@ -14,6 +14,7 @@ let dest = multer.diskStorage({
     }
 })
 const upload = multer({storage:dest}); 
+const validationProduct = require ('../middlewares/productValidationMiddleware');
 
 /*product list*/
 router.get("/", productController.index)
@@ -24,10 +25,10 @@ router.get("/:id/editar", productsController.edition);
 /*detail*/
 router.get("/:id", productsController.detail);
 /*new product send*/
-router.post("/",upload.single("productImages"), productController.save)            
+router.post("/",[upload.single("productImages"), validationProduct], productController.save)             
 /*edit product send*/
 router.put("/:id", upload.single("productImages"), productController.update)
 /*delete product*/
 router.delete("/:id", productController.delete)
 
-module.exports = router; 
+module.exports = router;  

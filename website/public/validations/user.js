@@ -20,7 +20,7 @@ window.addEventListener("load", function() {
         } else if (fieldlastname.value < 2){
             errores.push("El campo de apellido tiene que tener al menos 2 caracteres")
         }
-        let fieldemail = document.querySelector("input.email");
+        let fieldemail = document.querySelector("input.email"); 
         if (fieldemail.value == ""){
             errores.push("El campo de email tiene que estar completo")
         }
@@ -36,7 +36,7 @@ window.addEventListener("load", function() {
             event.preventDefault()
             let ul = document.querySelector("div.errores ul");
             for(let i = 0; i < errores.length; i++){
-                ul.innerHTML += "<li>"+ errores[i]+"</li>"
+                ul.innerHTML += "<li>"+errores[i]+"</li>"
             }
         }
         

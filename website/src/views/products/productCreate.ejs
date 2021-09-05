@@ -22,45 +22,70 @@
 
                 <fieldset>
                     <label for="product-name"></label>
-                    <input class="product-input" type="text" name="productName" id="product-name" required placeholder="Nombre del Producto">
+                    <input class="product-input" type="text" name="productName" id="product-name" placeholder="Nombre del Producto">
                 </fieldset>
+                <div class="text-error">
+                    <% if (locals.errors && errors.productName) { %>
+                        <%= errors.productName.msg %> 
+                    <% } %> 
+                </div>
         
                 <fieldset>
                     <label for="product-brand">Marca:</label>
-                    <select name="productBrand" id="product-brand" required>
+                    <select name="productBrand" id="product-brand" >
                         <option value="" selected disabled>Elegí una</option>
                         <% brands.forEach(brand => { %>
                             <option value="<%= brand.id %>">
                                 <%= brand.name %>
                             </option>
-                        <% }) %>
+                        <% }) %> 
                     </select>
                 </fieldset>
+                <div class="text-error">
+                    <% if (locals.errors && errors.productBrand) { %>
+                        <%= errors.productBrand.msg %> 
+                    <% } %> 
+                </div>
         
                 <fieldset>
                     <label for="product-descript"></label>
-                    <input class="product-input" type="textarea" name="productDescript" id="product-descript" required placeholder="Descripción">
+                    <input class="product-input" type="textarea" name="productDescript" id="product-descript"  placeholder="Descripción">
                 </fieldset>
+                <div class="text-error">
+                    <% if (locals.errors && errors.productDescript) { %>
+                        <%= errors.productDescript.msg %> 
+                    <% } %> 
+                </div>
         
                 <fieldset>
                     <label for="product-images">Imagen de Producto:</label>
-                    <input type="file" name="productImages" id="product-images" required>
+                    <input type="file" name="productImages" id="product-images" >
                 </fieldset>
+                <div class="text-error">
+                    <% if (locals.errors && errors.productImages) { %>
+                        <%= errors.productImages.msg %> 
+                    <% } %> 
+                </div>
         
                 <fieldset>
                     <label for="product-cat">Categoría:</label>
-                    <select name="productCat" id="product-cat" required>
+                    <select name="productCat" id="product-cat" >
                         <% categories.forEach(category => { %>
                             <option value="<%= category.id %>"> 
                                 <%= category.name %>
                             </option>
                         <% }) %>
                     </select>
-                </fieldset>
+                </fieldset> 
+                <div class="text-error">
+                    <% if (locals.errors && errors.productCat) { %>
+                        <%= errors.productCat.msg %> 
+                    <% } %> 
+                </div>
         
                 <fieldset>
                     <label for="product-colors">Colores:</label>
-                    <select name="productColors" id="product-colors" required multiple>
+                    <select name="productColors" id="product-colors" multiple>
                         <% colors.forEach(color => { %>
                             <option value="<%= color.id %>">
                                 <%= color.name %>
@@ -68,11 +93,21 @@
                         <% }) %>
                     </select>
                 </fieldset>
+                <div class="text-error">
+                    <% if (locals.errors && errors.productColors) { %>
+                        <%= errors.productColors.msg %> 
+                    <% } %> 
+                </div>
         
                 <fieldset>
                     <label id="product-price" for="product-price">$</label>
-                    <input class="product-input" type="text" name="productPrice" id="product-price" required placeholder ="Precio">
+                    <input class="product-input" type="text" name="productPrice" id="product-price" placeholder ="Precio">
                 </fieldset>
+                <div class="text-error">
+                    <% if (locals.errors && errors.productPrice) { %>
+                        <%= errors.productPrice.msg %> 
+                    <% } %> 
+                </div>
         
                 <fieldset>
                     <button id="sendButton" type="submit">Crear producto</button>

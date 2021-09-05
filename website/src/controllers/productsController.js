@@ -6,6 +6,7 @@ const category = require("../models/category");
 */
 
 const db = require("../database/models");
+const { validationResult } =require('express-validator');
 
 const productController = {
     index: function (req, res) {
@@ -37,7 +38,15 @@ const productController = {
 
   
     },
-    save: async (req, res) => {
+    save: async (req, res) => {  
+        const productValidation = validationResult (req);
+        if (productValidation.errors.length > 0) {
+            return res.render ("products/productCreate", {
+                errors: productValidation.mapped(),
+                oldData: req.body,
+                brands: db.Brand.findAll(),
+            }); 
+        } 
         try{
             const product = await db.Product.create({
                 name: req.body.productName,
@@ -47,14 +56,11 @@ const productController = {
                 image: req.file.filename, 
                 price: req.body.productPrice,
             }) 
-            
             const addColors = await product.setColors(Array.from(req.body.productColors))
             res.redirect("/producto")
         }catch (error){ 
             res.send(error)
          }
-        
-        
     },
     edition: function (req, res) {
         let product = db.Product.findByPk(req.params.id)

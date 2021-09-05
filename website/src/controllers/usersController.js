@@ -6,7 +6,7 @@ const db = require('../database/models');
 
 const usersController = {
     register: (req,res)=>{
-        return res.render("users/register")
+        return res.render("users/register") 
     }, 
 
     save: async function(req, res){
@@ -14,9 +14,9 @@ const usersController = {
         if (resultValidation.errors.length > 0) {
             return res.render ("users/register", {
                 errors: resultValidation.mapped(),
-                oldData: req.body,
+                oldData: req.body, 
             }); 
-        }
+        } 
         let userInDB = await db.User.findOne({
             where: {email: req.body.email}
         });
