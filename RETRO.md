@@ -1,3 +1,18 @@
+# SPRINT 7
+
+## Qué hicimos bien
+Realizamos dailys para delegarnos tareas y ver como viene cada uno con sus temas.
+Anotar todas las dudas que fueron surgiendo durante el trabajo para poder consultarlas con los profeores en horarios de clase.
+
+## Qué debemos seguir haciendo
+Comparar caminos que piensa cada uno para ver como optimizar más el código.
+
+## Qué debemos empezar a hacer
+Revisar nuevamente nuestro código para ver que podemos optimizar de lo que ya veníamos haciendo
+
+## Qué hicimos mal
+Demoramos mucho en resolver dudas y llegamos a último momento con demasiados ajustes para hacer.
+
 # SPRINT 6
 
 ## Qué hicimos bien
