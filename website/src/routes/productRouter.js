@@ -19,7 +19,7 @@ const validationProduct = require ('../middlewares/productValidationMiddleware')
 /*product list*/
 router.get("/", productController.index)
 /*product creation*/
-router.get("/crear", productsController.creation);
+router.get("/crear",validationProduct, productsController.creation);
 /*product edition*/
 router.get("/:id/editar", productsController.edition);
 /*detail*/

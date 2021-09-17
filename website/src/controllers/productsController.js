@@ -28,24 +28,32 @@ const productController = {
         })
     },
     creation: function (req, res) {
-        let colors = db.Color.findAll();
-        let brands = db.Brand.findAll();
-        let categories = db.Category.findAll();
+        const colors = db.Color.findAll();
+        const brands = db.Brand.findAll();
+        const categories = db.Category.findAll();
+        const productValidation = validationResult (req);
         Promise.all([colors, brands, categories])
         .then(function([colors, brands, categories]){
-            return res.render("products/productCreate", {colors: colors, brands: brands, categories: categories})
-        })
-
-  
-    },
-    save: async (req, res) => {  
+            if(productValidation.errors.length > 0){
+            //     return res.render("products/productCreate", {colors: colors, brands: brands, categories: categories,errors: productValidation.mapped(),
+            //         oldData: req.body })
+            // }else{
+                return res.render("products/productCreate", {colors: colors, brands: brands, categories: categories})
+            }
+        })},
+    save: async function(req, res) {  
+        const colors = await db.Color.findAll();
+        const brands = await db.Brand.findAll();
+        const categories = await db.Category.findAll();
         const productValidation = validationResult (req);
         if (productValidation.errors.length > 0) {
-            return res.render ("products/productCreate", {
+            return res.render("products/productCreate",{
                 errors: productValidation.mapped(),
                 oldData: req.body,
-                brands: db.Brand.findAll(),
-            }); 
+                colors: colors,
+                brands: brands,
+                categories: categories
+            })
         } 
         try{
             const product = await db.Product.create({
@@ -57,10 +65,10 @@ const productController = {
                 price: req.body.productPrice,
             }) 
             const addColors = await product.setColors(Array.from(req.body.productColors))
-            res.redirect("/producto")
+            res.render("products/list")
         }catch (error){ 
             res.send(error)
-         }
+        }
     },
     edition: function (req, res) {
         let product = db.Product.findByPk(req.params.id)

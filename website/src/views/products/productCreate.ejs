@@ -16,8 +16,10 @@
     <%- include("../partials/header")%>
 
         <section>
-         
-            <form id= "form-product" action="/producto/" method="post" enctype="multipart/form-data">
+            <div class="errores" > 
+                <ul id="lista-errores"></ul>
+            </div>
+            <form id="form-product" action="/producto/" method="post" enctype="multipart/form-data">
                 <h3>Creá el producto</h3>
 
                 <fieldset>
@@ -35,10 +37,10 @@
                     <select name="productBrand" id="product-brand" >
                         <option value="" selected disabled>Elegí una</option>
                         <% brands.forEach(brand => { %>
-                            <option value="<%= brand.id %>">
+                            <option value="<%= brand.id %>"> 
                                 <%= brand.name %>
                             </option>
-                        <% }) %> 
+                        <% }) %>
                     </select>
                 </fieldset>
                 <div class="text-error">
@@ -120,5 +122,6 @@
             
         </section> 
     <%- include("../partials/footer")%>
+    <script src="/validations/product.js"></script>
 </body>
 </html>

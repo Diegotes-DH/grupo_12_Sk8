@@ -3,7 +3,7 @@ window.addEventListener("load", function() {
     let formulario = document.querySelector("form.createForm");
 
     formulario.addEventListener("submit", function(event) {
-        
+        event.preventDefault()
         let errores = [];
         
         let fieldname = document.querySelector("input.name");
@@ -33,7 +33,7 @@ window.addEventListener("load", function() {
 
 
         if (errores.length > 0){
-            event.preventDefault()
+            
             let ul = document.querySelector("div.errores ul");
             for(let i = 0; i < errores.length; i++){
                 ul.innerHTML += "<li>"+errores[i]+"</li>"

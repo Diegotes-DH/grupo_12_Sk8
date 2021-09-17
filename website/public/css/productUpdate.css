@@ -13,7 +13,14 @@ section{
     margin:auto;
 
 } 
-
+.errores{
+    color:#fe4a49;
+    text-align: center;
+    
+}
+#lista-errores{
+    list-style: none;
+}
 #form-product{
     display: flex;
     flex-wrap: wrap;
