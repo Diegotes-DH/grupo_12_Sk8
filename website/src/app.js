@@ -36,7 +36,10 @@ const products = require("./routes/productRouter");
 app.use("/producto", products);
 const users = require("./routes/usersRouter");
 app.use("/usuario", users); 
-
+const productsApi = require('./routes/api/productsRouter');
+app.use('/api/products', productsApi);
+const usersApi = require('./routes/api/usersRouter');
+app.use('/api/users', usersApi);
 /* Error 404 */
 app.use((req, res, next) => {
     res.status(404).render("error");
