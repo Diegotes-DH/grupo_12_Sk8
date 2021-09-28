@@ -28,7 +28,7 @@ class Productos extends Component{
     mostrarProducto = (data) => {
             console.log('data:',data.data)
         this.setState({
-            prod: data.data.map((product) => <li>{product.name}</li>),
+            prod: data.data.map((product) => <li>{product}</li>),
             cant: data.count
         })
     }
@@ -40,16 +40,31 @@ class Productos extends Component{
         } else{
             contenido = this.state.prod
             ids = this.state.cant
-    }return(<div>
-                <h2>Cantidad de Productos: {ids}</h2>
-                <h4>Productos:</h4>
-                <ul>
-                {contenido}
-                </ul>
-                
-                <button>Hace click!</button>
-            </div>
-            )
+    }return(
+        <div>
+            <h2>Cantidad de Productos: {ids}</h2>
+            <h2>Productos:</h2>
+            
+            {contenido.map(producto => {
+                return(
+                <div>
+                    
+                    {console.log('hola:',producto)}
+                    <h4>Nombre: {producto.props.children.name}</h4>
+
+                    <ul>
+                    <li>ID: {producto.props.children.id}</li>
+                    <li>Descripcion: {producto.props.children.descript}</li>
+                    <li>Precio: {producto.props.children.price}</li>
+                    <li>Detalle: {producto.props.children.detail}</li>
+
+                    </ul>
+                </div>
+            )})}
+            
+            <button>Hace click!</button>
+        </div>
+        )
         }
 }
 

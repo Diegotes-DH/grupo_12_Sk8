@@ -11,7 +11,7 @@ class Usuarios extends Component{
     constructor(props){
         super(props);
         this.state = {
-            us: '',
+            us: [],
             cant:''
         }
     }
@@ -27,7 +27,7 @@ class Usuarios extends Component{
     mostrarUsuario = (data) => {
             console.log('data:',data.data)
         this.setState({
-            us: data.data.map(user => <li>{user.name}</li>),
+            us: data.data.map(user => <li>{user}</li>),
             cant: data.count
         })
     }
@@ -39,16 +39,41 @@ class Usuarios extends Component{
         } else{
             contenido = this.state.us
             ids = this.state.cant
-    }return(<div>
+        }return(
+            <div>
                 <h2>Cantidad de Usuarios: {ids}</h2>
-                <h4>Usuarios:</h4>
-                <ul>
-                {contenido}
-                </ul>
+                <h2>Usuarios:</h2>
+                
+                {contenido.map(usuario => {
+                    return(
+                    <div>
+                        
+                        {console.log('hola:',usuario)}
+                        <h4>Nombre: {usuario.props.children.name}</h4>
+    
+                        <ul>
+                        <li>ID: {usuario.props.children.id}</li>
+                        <li>Descripcion: {usuario.props.children.lastname}</li>
+                        <li>Precio: {usuario.props.children.email}</li>
+                        <li>Detalle: {usuario.props.children.detail}</li>
+    
+                        </ul>
+                    </div>
+                )})}
                 
                 <button>Hace click!</button>
             </div>
             )
+    // }return(<div>
+    //             <h2>Cantidad de Usuarios: {ids}</h2>
+    //             <h4>Usuarios:</h4>
+    //             <ul>
+    //             {contenido}
+    //             </ul>
+                
+    //             <button>Hace click!</button>
+    //         </div>
+    //         )
         }
 }
 
