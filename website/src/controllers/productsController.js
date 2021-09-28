@@ -65,7 +65,7 @@ const productController = {
                 price: req.body.productPrice,
             }) 
             const addColors = await product.setColors(Array.from(req.body.productColors))
-            res.render("products/list")
+            res.redirect('/producto')
         }catch (error){ 
             res.send(error)
         }

@@ -1,10 +1,12 @@
-const product = require('../models/product');
-const color = require('../models/color');
-const brand = require('../models/brand');
-const category = require("../models/category");
+const db = require("../database/models");
 
 const controller = {
-    home:(req,res) => res.render("index",{list:product.allWithExtra()}),
+    home: function (req, res) {
+        db.Product.findAll()
+            .then(function (products){
+                return res.render('index', {products: products})
+            })
+    },
     cart: (req,res)=> res.render("cart"),
     
 }

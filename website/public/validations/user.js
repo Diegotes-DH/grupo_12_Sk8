@@ -1,9 +1,41 @@
 window.addEventListener("load", function() {
 
     let formulario = document.querySelector("form.createForm");
+    let fieldname = document.querySelector("input.name");
+    let fieldlastname = document.querySelector("input.lastname");
+    let fieldemail = document.querySelector("input.email"); 
+    let fieldpassword = document.querySelector("input.password");
+
+
+
+    fieldname.addEventListener('focusout', function() {
+        if (fieldname.value == '') {
+            fieldname.style.background = '#F76E6E';
+        }
+    });
+
+    fieldlastname.addEventListener('focusout', function() {
+        if (fieldlastname.value == '') {
+            fieldlastname.style.background = '#F76E6E';
+        }
+    });
+    
+    fieldemail.addEventListener('focusout', function() {
+        if (fieldemail.value == '') {
+            fieldemail.style.background = '#F76E6E';
+        }
+    });
+
+    fieldpassword.addEventListener('focusout', function() {
+        if (fieldpassword.value == '') {
+            fieldpassword.style.background = '#F76E6E';
+        }
+    });
+
+
 
     formulario.addEventListener("submit", function(event) {
-        event.preventDefault()
+        
         let errores = [];
         
         let fieldname = document.querySelector("input.name");
@@ -32,8 +64,10 @@ window.addEventListener("load", function() {
         }
 
 
+
+        console.log(errores)
         if (errores.length > 0){
-            
+            event.preventDefault();
             let ul = document.querySelector("div.errores ul");
             for(let i = 0; i < errores.length; i++){
                 ul.innerHTML += "<li>"+errores[i]+"</li>"

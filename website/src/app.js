@@ -6,6 +6,9 @@ const session = require("express-session");
 const cookie = require("cookie-parser");
 const bcrypt = require("bcryptjs");
 const app = express();
+const cors = require('cors');
+
+app.use(cors());
 
 /* Middlewares de aplicación */
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware")
@@ -40,6 +43,8 @@ const productsApi = require('./routes/api/productsRouter');
 app.use('/api/products', productsApi);
 const usersApi = require('./routes/api/usersRouter');
 app.use('/api/users', usersApi);
+const carrito = require("./routes/cartRouter");
+app.use("/carrito", carrito);
 /* Error 404 */
 app.use((req, res, next) => {
     res.status(404).render("error");

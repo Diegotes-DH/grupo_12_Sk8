@@ -54,7 +54,10 @@
 
             <article>
                 <button type="submit" value="buy-now" class="buy-now">Comprar ahora</button>
-                <button type="submit" value="add-to-cart" class="add-to-cart">Agregar al Carrito</button>
+                <form action="/carrito/agregar" method="POST">
+                    <input type="hidden" name="product_id" value=<%= product.id %> />
+                    <button type="submit" value="add-to-cart" class="add-to-cart">Agregar al Carrito</button>
+                </form>
             </article>
     
             <article id="right-bottom-section">

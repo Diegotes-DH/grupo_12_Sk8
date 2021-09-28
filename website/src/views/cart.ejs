@@ -18,59 +18,21 @@
     <main>
         <section class="main-section">
             <h3 class="main-name">Artículos</h3>
-            <article>                
-                <img src="/images/skate.png" class="article-pic" alt="article-picture">
-                <div class="right-part">
-                    <h3 class="product-name">Skate Armado</h3>
-                    <p class="costo-envio">Envio Gratis</p>
-                    <label>Cantidad:</label>
-                    <select name="cantidad">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                    <h2 class="product-price">$10.000</h2>
-                </div>
-                    <div class="article-bottom">
-                        <a href="#">Eliminar</a>
-                        <a href="#">Productos similares</a>
+            <% productsFind.map(product => { %>
+                <article>   
+                    <img src="/uploads/products/<%= product.image %>" class="article-pic" alt="article-picture">
+                    <div class="right-part">
+                        <h3 class="product-name"><%= product.name %></h3>
+                        <p class="costo-envio">Envio Gratis</p>
+                        <h2 class="product-price">$<%= product.price %></h2>
                     </div>
-                
-            </article>
-
-            <article>
-                <img src="/images/rueda.png" class="article-pic" alt="article-picture">
-                <div class="right-part">
-                    <h3>Ruedas</h3>
-                    <p>Envio Gratis</p>
-                    <label>Cantidad:</label>
-                    <select name="cantidad">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                    <h2 class="product-price">$2.000</h2>
-                </div>
-                    <div class="article-bottom">
-                        <a href="#">Eliminar</a>
-                        <a href="#">Productos similares</a>
-                    </div>
-                
-            </article>
+                        <form class="article-bottom" action="/carrito/borrar/?_method=DELETE" method="POST">
+                            <input type="hidden" name="id_product" value=<%= product.id %> />
+                            <button type="submit">Eliminar</button>
+                        </form>
+                    
+                </article>
+            <% }) %>
         </section>
 
         <section class="envio-section">
@@ -82,7 +44,7 @@
         </section>
         <section class="pay-section">
             <h3 class="total">Total con Envío</h3>
-            <h2 class="final-price">$12.000</h2>
+            <h2 class="final-price">$<%= lastPrice %></h2>
             <p class="cuotas">Hasta 12 cuotas</p>
             <button type="submit" value="buy-now" class="buy-now">Finalizar compra</button>
         </section>

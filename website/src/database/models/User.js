@@ -21,7 +21,10 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.STRING,
         },
         image:{
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+        },
+        admin: {
+            type: dataTypes.INTEGER,
         }
     }
 

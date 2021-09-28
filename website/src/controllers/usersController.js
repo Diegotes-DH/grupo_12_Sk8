@@ -41,8 +41,10 @@ const usersController = {
             email: req.body.email,
             password: req.body.password,
             image: req.file.filename, 
+            admin: (req.body.email).includes("@sk8.com") ? 1 : 0,
         })
-        res.redirect("/usuario/ingresa")
+
+        res.redirect("/usuario/ingresa");
     },
 
     login: function (req, res) {
@@ -59,6 +61,8 @@ const usersController = {
                 delete userToLogin.password;
                 //creo la propiedad userLogged y le asigno el valor de userToLogin
                 req.session.userLogged = userToLogin;
+
+                console.log(userToLogin);
 
                 if(req.body.remember_me){
                     res.cookie("userEmail", req.body.email, {maxAge: (1000*60)*2})

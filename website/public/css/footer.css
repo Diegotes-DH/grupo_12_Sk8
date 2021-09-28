@@ -5,9 +5,8 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 10px;
     text-align: center;
-    margin: 30px auto 0;
+    width: 100%;
 
 }
 

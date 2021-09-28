@@ -23,23 +23,24 @@
 
 
         <h1>Destacados</h1>
-        <% list.forEach(product => { %>
-            <article class="product">
-                <% if (product.image) { %>
-                    <figure><img class="product-image" src="/uploads/products/<%= product.image[0]%>" alt=""></figure>
-                <% } else { %>
-                    <figure><img class="product-image" src="/images/sk8-logo.png" alt=""></figure>
-                <% } %>
-                
-                    <h5 class="product-name"><%= product.name %></h5>
-                    <p class="description"><%= product.descript %></p>
-                    <p class="price"><%= product.price %></p>
-                    <button class="buy">Comprar</button>
-
-            </article>
-        <% }) %>
+        <section id="main-content">
+            <% products.forEach(product => { %>
+                <article class="product">
+                    <% if (product.image) { %>
+                        <img class="product-image" src="/uploads/products/<%= product.image%>" alt="">
+                    <% } else { %>
+                        <img class="product-image" src="/images/sk8-logo.png" alt="">
+                    <% } %>
+                    
+                        <h2 class="product-name"><%= product.name %></h2>
+                        <h4 class="description"><%= product.descript %></h4>
+                        <p class="price">$<%= product.price %></p>
+                        <a href="/producto/<%= product.id %>">Ver producto</a>
+                    
+                </article>
+            <% }) %>
         
-    </section>
+        </section> 
 
     <section class="final-info">
         <div>
