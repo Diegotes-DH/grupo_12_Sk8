@@ -49,12 +49,11 @@ class Usuarios extends Component{
                     <div>
                         
                         {console.log('hola:',usuario)}
-                        <h4>Nombre: {usuario.props.children.name}</h4>
+                        <h4>Nombre: {usuario.props.children.name + " " + usuario.props.children.lastname}</h4>
     
                         <ul>
                         <li>ID: {usuario.props.children.id}</li>
-                        <li>Descripcion: {usuario.props.children.lastname}</li>
-                        <li>Precio: {usuario.props.children.email}</li>
+                        <li>Email: {usuario.props.children.email}</li>
                         <li>Detalle: {usuario.props.children.detail}</li>
     
                         </ul>

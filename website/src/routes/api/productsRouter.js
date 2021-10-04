@@ -5,5 +5,6 @@ const productsController = require('../../controllers/api/productsController');
 
 router.get('/', productsController.list);
 router.get('/:id', productsController.show)
+router.get('/colors', productsController.colors)
 
 module.exports = router;

@@ -4,6 +4,7 @@ const productsController = require("../controllers/productsController");
 const multer = require("multer");
 const path = require('path');
 const productController = require('../controllers/productsController');
+const noGuestMiddleware = require("../middlewares/noGuestMiddleware");
 let dest = multer.diskStorage({
     destination: function (req, file, cb) {
         let extension = path.extname(file.originalname);
@@ -19,9 +20,9 @@ const validationProduct = require ('../middlewares/productValidationMiddleware')
 /*product list*/
 router.get("/", productController.index)
 /*product creation*/
-router.get("/crear",validationProduct, productsController.creation);
+router.get("/crear",[noGuestMiddleware,validationProduct], productsController.creation);
 /*product edition*/
-router.get("/:id/editar", productsController.edition);
+router.get("/:id/editar",noGuestMiddleware, productsController.edition);
 /*detail*/
 router.get("/:id", productsController.detail);
 /*new product send*/

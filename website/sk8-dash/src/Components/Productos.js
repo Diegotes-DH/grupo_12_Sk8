@@ -13,7 +13,8 @@ class Productos extends Component{
         super(props);
         this.state = {
             prod: [],
-            cant:''
+            cant:'',
+            
         }
     }
     apiCall(url, consecuencia){
@@ -29,27 +30,32 @@ class Productos extends Component{
             console.log('data:',data.data)
         this.setState({
             prod: data.data.map((product) => <li>{product}</li>),
-            cant: data.count
-        })
+            cant: data.count,
+            allData: data,
+        },console.log("allData:", this.state.allData))
     }
     render(){
         let contenido;
         let ids;
+        let categ;
         if(this.state.prod ===''){
             contenido = <h3>cargando...</h3>
         } else{
             contenido = this.state.prod
             ids = this.state.cant
+            categ = this.state.cats
     }return(
         <div>
             <h2>Cantidad de Productos: {ids}</h2>
+            <h2>Productos por categoria: {categ}</h2>
+            <ul>
+            {console.log('hola:',this.state.allData)}
+                {categ}
+            </ul>
             <h2>Productos:</h2>
-            
             {contenido.map(producto => {
                 return(
                 <div>
-                    
-                    {console.log('hola:',producto)}
                     <h4>Nombre: {producto.props.children.name}</h4>
 
                     <ul>
